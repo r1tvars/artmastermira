@@ -1,0 +1,18 @@
+uuid: d5e8ec41-dcd0-408a-a925-599b9b9cfba8
+langcode: lv
+status: true
+dependencies:
+  config:
+    - comment.type.comment
+id: comment.comment.created
+field_name: created
+entity_type: comment
+bundle: comment
+label: Izveidots
+description: 'The time that the comment was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

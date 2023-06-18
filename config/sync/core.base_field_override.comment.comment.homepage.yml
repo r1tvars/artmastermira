@@ -1,0 +1,18 @@
+uuid: 8a3be3e9-52e3-4512-bc07-b807575ae425
+langcode: lv
+status: true
+dependencies:
+  config:
+    - comment.type.comment
+id: comment.comment.homepage
+field_name: homepage
+entity_type: comment
+bundle: comment
+label: 'Mājas lapa'
+description: "The comment author's home page address."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: uri

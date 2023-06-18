@@ -1,0 +1,18 @@
+uuid: 0b40b466-4d36-484a-bbd4-b888d90885ac
+langcode: lv
+status: true
+dependencies:
+  config:
+    - comment.type.comment
+id: comment.comment.mail
+field_name: mail
+entity_type: comment
+bundle: comment
+label: E-pasts
+description: "The comment author's email address."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

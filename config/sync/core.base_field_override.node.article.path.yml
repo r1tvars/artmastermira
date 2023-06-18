@@ -1,0 +1,20 @@
+uuid: 04d589c1-707b-45e0-9a1a-80a41deb11b7
+langcode: lv
+status: true
+dependencies:
+  config:
+    - node.type.article
+  module:
+    - path
+id: node.article.path
+field_name: path
+entity_type: node
+bundle: article
+label: 'URL aizstājvārds'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

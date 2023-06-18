@@ -1,0 +1,22 @@
+uuid: 1bdf8af6-6fb7-46dd-98bf-5d60b2124475
+langcode: lv
+status: true
+dependencies:
+  config:
+    - comment.type.comment
+id: comment.comment.status
+field_name: status
+entity_type: comment
+bundle: comment
+label: Publicēts
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: 'Drupal\comment\Entity\Comment::getDefaultStatus'
+settings:
+  on_label: Aktīvs
+  off_label: Izslēgts
+field_type: boolean

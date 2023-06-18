@@ -1,16 +1,14 @@
-uuid: 865183d2-8592-477e-bf18-81ef0144157a
-langcode: en
+uuid: f83cdb4f-fcfa-4982-8492-5db76db5a7c9
+langcode: lv
 status: true
 dependencies:
   config:
     - node.type.page
-_core:
-  default_config_hash: fPUEnm4T5zfZRr3ttDUqq7yCDd2uW3clWD-pvos4tlQ
-id: node.page.promote
-field_name: promote
+id: node.page.sticky
+field_name: sticky
 entity_type: node
 bundle: page
-label: 'Izvirzīts uz pirmo lapu'
+label: 'Izcelts saraksta augšā'
 description: ''
 required: false
 translatable: true

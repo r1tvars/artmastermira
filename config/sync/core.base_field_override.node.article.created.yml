@@ -1,0 +1,18 @@
+uuid: 1d4499a0-57f2-4868-aba5-ed62020d7644
+langcode: lv
+status: true
+dependencies:
+  config:
+    - node.type.article
+id: node.article.created
+field_name: created
+entity_type: node
+bundle: article
+label: Sagatavots
+description: 'The time that the node was created.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

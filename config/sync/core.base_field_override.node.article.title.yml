@@ -1,0 +1,18 @@
+uuid: 8f320ab0-70e3-48a9-b0e6-2ea718f1c17f
+langcode: lv
+status: true
+dependencies:
+  config:
+    - node.type.article
+id: node.article.title
+field_name: title
+entity_type: node
+bundle: article
+label: Virsraksts
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
