@@ -1,0 +1,11 @@
+uuid: 4e881452-fa3c-4fb3-a4af-cc8bfa1d1031
+langcode: lv
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 1noCXlegCr5HFehQRF1ViXy1jhU1jZ_sNN99a8Sj5jo
+id: front
+label: Sākumlapa
+tags:
+  canonical_url: '[site:url]'
+  shortlink: '[site:url]'

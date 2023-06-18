@@ -1,0 +1,11 @@
+uuid: c22ceef5-db01-4edb-85db-f3700418b32b
+langcode: lv
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: sL588ui1E_8-2c_UupwyYxcqX2OVyMFp3HTLbbFqvPc
+id: global
+label: Globāls
+tags:
+  canonical_url: '[current-page:url]'
+  title: '[current-page:title] | [site:name]'

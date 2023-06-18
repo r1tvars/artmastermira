@@ -23,6 +23,8 @@
         "drupal/gin": "*",
         "drupal/gin_login": "^2.0",
         "drupal/gin_toolbar": "^1.0@RC",
+        "drupal/metatag": "^1.25",
+        "drupal/pathauto": "^1.11",
         "kint-php/kint": "^5.0"
     },
     "conflict": {
