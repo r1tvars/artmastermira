@@ -1,5 +1,5 @@
 uuid: 83b5ff34-98d7-4f9c-8d7e-2fbf3e24d13c
-langcode: en
+langcode: lv
 status: true
 dependencies:
   module:
@@ -16,7 +16,7 @@ provider: null
 plugin: node_syndicate_block
 settings:
   id: node_syndicate_block
-  label: 'RSS feed'
+  label: 'RSS barotne'
   label_display: '0'
   provider: node
   block_count: 10

@@ -1,5 +1,5 @@
 uuid: 8403b8ff-b187-4915-885a-12bed99b9f42
-langcode: en
+langcode: lv
 status: true
 dependencies:
   theme:
@@ -14,7 +14,7 @@ provider: null
 plugin: page_title_block
 settings:
   id: page_title_block
-  label: 'Page title'
+  label: 'Lapas nosaukums'
   label_display: '0'
   provider: core
 visibility: {  }

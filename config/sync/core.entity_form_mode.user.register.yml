@@ -1,5 +1,5 @@
 uuid: 16d34afa-8391-4898-9728-f47e9c67cad6
-langcode: en
+langcode: lv
 status: true
 dependencies:
   module:
@@ -7,6 +7,6 @@ dependencies:
 _core:
   default_config_hash: flXhTcp55yLcyy7ZLOhPGKGZobZQJdkAFVWV3LseiuI
 id: user.register
-label: Register
+label: Reģistrēties
 targetEntityType: user
 cache: true

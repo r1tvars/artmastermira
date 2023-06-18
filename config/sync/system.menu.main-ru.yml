@@ -1,0 +1,8 @@
+uuid: d30a193a-357b-45ad-8867-76c04d210a40
+langcode: ru
+status: true
+dependencies: {  }
+id: main-ru
+label: 'Main menu ru'
+description: ''
+locked: false

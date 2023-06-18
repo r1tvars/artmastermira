@@ -1,5 +1,5 @@
 uuid: 78b6aa91-9919-46e5-9aca-ee79aebee10e
-langcode: en
+langcode: lv
 status: true
 dependencies:
   module:
@@ -39,14 +39,14 @@ tips:
   views-ui-format:
     id: views-ui-format
     plugin: text
-    label: 'Output format'
+    label: 'Izvades formāts'
     weight: 4
     selector: .views-ui-display-tab-bucket.format
     body: "Choose how to output results. E.g., choose <em>Content</em> to output each item completely, using your configured display settings. Or choose <em>Fields</em>, which allows you to output only specific fields for each result. Additional formats can be added by installing modules to <em>extend</em> Drupal's base functionality."
   views-ui-fields:
     id: views-ui-fields
     plugin: text
-    label: Fields
+    label: Lauki
     weight: 5
     selector: .views-ui-display-tab-bucket.field
     body: 'If this view uses fields, they are listed here. You can click on a field to configure it.'
@@ -81,7 +81,7 @@ tips:
   views-ui-preview:
     id: views-ui-preview
     plugin: text
-    label: Preview
+    label: Priekšskatījums
     weight: 10
     position: right
     selector: '#preview-submit'

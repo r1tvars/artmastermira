@@ -1,5 +1,5 @@
 uuid: a6d06552-defe-431b-bb22-eae77bb8cd10
-langcode: en
+langcode: lv
 status: true
 dependencies:
   module:
@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: zji0_13MyVGK7Bn1lUMDeZyyOIZedWvqpYUeM_SioPI
 id: who_s_new
-label: "Who's new"
+label: 'Jauni lietotāji'
 module: user
 description: 'Shows a list of the newest user accounts on the site.'
 tag: default
@@ -16,11 +16,11 @@ base_field: uid
 display:
   default:
     id: default
-    display_title: Default
+    display_title: 'Noklusētā vērtība'
     display_plugin: default
     position: 0
     display_options:
-      title: "Who's new"
+      title: 'Jauni lietotāji'
       fields:
         name:
           id: name
@@ -64,13 +64,13 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Apstiprināt
           reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          reset_button_label: Attīrīt
+          exposed_sorts_label: 'Kārtot pēc'
           expose_sort_order: true
           sort_asc_label: Asc
-          sort_desc_label: Desc
+          sort_desc_label: Dilst.
       access:
         type: perm
         options:
@@ -180,14 +180,14 @@ display:
       tags: {  }
   block_1:
     id: block_1
-    display_title: "Who's new"
+    display_title: 'Jauni lietotāji'
     display_plugin: block
     position: 1
     display_options:
       display_description: 'A list of new users'
       display_extenders: {  }
-      block_description: "Who's new"
-      block_category: User
+      block_description: 'Jauni lietotāji'
+      block_category: Lietotājs
     cache_metadata:
       max-age: -1
       contexts:

@@ -1,5 +1,5 @@
 uuid: d55d5eb6-c666-4fc5-ae64-a2973e7680f1
-langcode: en
+langcode: lv
 status: true
 dependencies:
   module:
@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: Okz8QMYRGvq95nqLGYjp8gLiy93DKoMEzEVZVwEeg4M
 id: language
-label: Language
+label: Valoda
 module: language
 routes:
   -
@@ -16,7 +16,7 @@ tips:
   language-overview:
     id: language-overview
     plugin: text
-    label: Languages
+    label: Valodas
     weight: 1
     body: '<p>The "Languages" page allows you to add, edit, delete, and reorder languages for the site.</p>'
   language-add:

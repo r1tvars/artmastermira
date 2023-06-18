@@ -1,5 +1,5 @@
 uuid: c1e64455-b332-4f93-96cf-fdc7b2ec524e
-langcode: en
+langcode: lv
 status: true
 dependencies:
   module:
@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: Kcx1PIw-KgGbTo5_tOkbI6TWJiP_0Sr7t5T9SuMV2hA
 id: locale
-label: Translation
+label: Tulkojums
 module: locale
 routes:
   -
@@ -29,7 +29,7 @@ tips:
   locale-search:
     id: locale-search
     plugin: text
-    label: Search
+    label: Meklēt
     weight: 3
     selector: '#edit-string'
     body: 'Enter the specific word or sentence you want to translate, you can also write just a part of a word.'
@@ -50,7 +50,7 @@ tips:
   locale-translate:
     id: locale-translate
     plugin: text
-    label: Translate
+    label: Tulkot
     weight: 6
     selector: .js-form-type-textarea
     body: 'You can write your own translation in the text fields of the right column. Try to figure out in which context the text will be used in order to translate it in the appropriate way.'

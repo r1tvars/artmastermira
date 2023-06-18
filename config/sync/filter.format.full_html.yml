@@ -1,12 +1,12 @@
 uuid: 8938a2e6-ba0e-4d39-87a4-159a8e4e0060
-langcode: en
+langcode: lv
 status: true
 dependencies:
   module:
     - editor
 _core:
   default_config_hash: WNeK5FbcY8pXgEpbD_KgRzlF1-5PL3BJXwqaBctPTqw
-name: 'Full HTML'
+name: 'Pilns HTML'
 format: full_html
 weight: 2
 filters:

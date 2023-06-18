@@ -1,5 +1,5 @@
 uuid: 121da1f0-8efa-49c1-93ea-0f05586a9d6f
-langcode: en
+langcode: lv
 status: true
 dependencies:
   module:
@@ -8,20 +8,20 @@ dependencies:
 _core:
   default_config_hash: j0txIxY4nkJT_dscmXckM-1vanygDkJAeHPawZKfyH0
 id: watchdog
-label: Watchdog
+label: Sargsuns
 module: views
-description: 'Recent log messages'
+description: 'Jaunākās žurnāla ziņas'
 tag: ''
 base_table: watchdog
 base_field: wid
 display:
   default:
     id: default
-    display_title: Default
+    display_title: 'Noklusētā vērtība'
     display_plugin: default
     position: 0
     display_options:
-      title: 'Recent log messages'
+      title: 'Jaunākās žurnāla ziņas'
       fields:
         nothing:
           id: nothing
@@ -29,7 +29,7 @@ display:
           field: nothing
           relationship: none
           group_type: group
-          admin_label: Icon
+          admin_label: Ikona
           plugin_id: custom
           label: ''
           exclude: false
@@ -129,7 +129,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: machine_name
-          label: Severity
+          label: Smagums
           exclude: true
           alter:
             alter_text: false
@@ -179,7 +179,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: standard
-          label: Type
+          label: Veids
           exclude: false
           alter:
             alter_text: false
@@ -228,7 +228,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: date
-          label: Date
+          label: Datums
           exclude: false
           alter:
             alter_text: false
@@ -280,7 +280,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: dblog_message
-          label: Message
+          label: Ziņojums
           exclude: false
           alter:
             alter_text: false
@@ -332,7 +332,7 @@ display:
           entity_type: user
           entity_field: name
           plugin_id: field
-          label: User
+          label: Lietotājs
           exclude: false
           alter:
             alter_text: false
@@ -395,7 +395,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: dblog_operations
-          label: Operations
+          label: Darbības
           exclude: false
           alter:
             alter_text: false
@@ -444,26 +444,26 @@ display:
           total_pages: null
           id: 0
           tags:
-            next: ››
-            previous: ‹‹
+            next: '"'
+            previous: '"'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
+            items_per_page_options_all_label: '- Visi -'
             offset: false
             offset_label: Offset
       exposed_form:
         type: basic
         options:
-          submit_button: Filter
+          submit_button: Filtrēt
           reset_button: true
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          reset_button_label: Attīrīt
+          exposed_sorts_label: 'Kārtot pēc'
           expose_sort_order: false
           sort_asc_label: Asc
-          sort_desc_label: Desc
+          sort_desc_label: Dilst.
       access:
         type: perm
         options:
@@ -478,10 +478,10 @@ display:
           field: area_text_custom
           relationship: none
           group_type: group
-          admin_label: 'No log messages available.'
+          admin_label: 'Žurnālā nav ziņojumu.'
           plugin_id: text_custom
           empty: true
-          content: 'No log messages available.'
+          content: 'Žurnālā nav ziņojumu.'
           tokenize: false
       sorts:
         wid:
@@ -513,7 +513,7 @@ display:
           exposed: true
           expose:
             operator_id: type_op
-            label: Type
+            label: Veids
             description: ''
             use_operator: false
             operator: type_op
@@ -554,7 +554,7 @@ display:
           exposed: true
           expose:
             operator_id: severity_op
-            label: Severity
+            label: Smagums
             description: ''
             use_operator: false
             operator: severity_op
@@ -695,7 +695,7 @@ display:
       tags: {  }
   page:
     id: page
-    display_title: Page
+    display_title: Lapa
     display_plugin: page
     position: 1
     display_options:

@@ -1,5 +1,5 @@
 uuid: 327daf13-1584-43bb-af39-4a50292b3e2b
-langcode: en
+langcode: lv
 status: true
 dependencies:
   module:
@@ -16,11 +16,11 @@ base_field: uid
 display:
   default:
     id: default
-    display_title: Default
+    display_title: 'Noklusētā vērtība'
     display_plugin: default
     position: 0
     display_options:
-      title: "Who's online"
+      title: 'Kurš ir klātienē'
       fields:
         name:
           id: name
@@ -64,13 +64,13 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Apstiprināt
           reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          reset_button_label: Attīrīt
+          exposed_sorts_label: 'Kārtot pēc'
           expose_sort_order: true
           sort_asc_label: Asc
-          sort_desc_label: Desc
+          sort_desc_label: Dilst.
       access:
         type: perm
         options:
@@ -142,8 +142,8 @@ display:
           exposed: false
           expose:
             operator_id: access_op
-            label: 'Last access'
-            description: 'A user is considered online for this long after they have last viewed a page.'
+            label: 'Piedējās piekļuves laiks'
+            description: 'Lietotājs tiek uzskatīts kā tiešsaistē esošs šādu laiku pēc pēdējās lapas skatīšanas.'
             use_operator: false
             operator: access_op
             operator_limit_selection: false
@@ -210,13 +210,13 @@ display:
       tags: {  }
   who_s_online_block:
     id: who_s_online_block
-    display_title: "Who's online"
+    display_title: 'Kurš ir klātienē'
     display_plugin: block
     position: 1
     display_options:
       display_description: 'A list of users that are currently logged in.'
       display_extenders: {  }
-      block_description: "Who's online"
+      block_description: 'Kurš ir klātienē'
     cache_metadata:
       max-age: -1
       contexts:

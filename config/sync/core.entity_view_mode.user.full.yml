@@ -1,5 +1,5 @@
 uuid: 9cf408d0-7402-433a-ab27-9ffaef0d556d
-langcode: en
+langcode: lv
 status: false
 dependencies:
   module:
@@ -7,6 +7,6 @@ dependencies:
 _core:
   default_config_hash: mQIF_foYjmnVSr9MpcD4CTaJE_FpO1AyDd_DskztGhM
 id: user.full
-label: 'User account'
+label: 'Lietotāja konts'
 targetEntityType: user
 cache: true

@@ -1,5 +1,5 @@
 uuid: 5cb45984-878a-48ac-a40d-dee8c6c62c9b
-langcode: en
+langcode: lv
 status: false
 dependencies:
   config:
@@ -10,7 +10,7 @@ dependencies:
 _core:
   default_config_hash: ko9GznzNBXHkuz09OCaBQ1YOSJYYjTY0TBpNV3WKnog
 id: archive
-label: Archive
+label: Arhīvs
 module: node
 description: 'All content, by month.'
 tag: default
@@ -19,7 +19,7 @@ base_field: nid
 display:
   default:
     id: default
-    display_title: Default
+    display_title: 'Noklusētā vērtība'
     display_plugin: default
     position: 0
     display_options:
@@ -33,26 +33,26 @@ display:
           total_pages: 0
           id: 0
           tags:
-            next: ››
-            previous: ‹‹
+            next: '"'
+            previous: '"'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
             items_per_page_options: '5, 10, 25, 50'
             items_per_page_options_all: false
-            items_per_page_options_all_label: '- All -'
+            items_per_page_options_all_label: '- Visi -'
             offset: false
             offset_label: Offset
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
+          submit_button: Apstiprināt
           reset_button: false
-          reset_button_label: Reset
-          exposed_sorts_label: 'Sort by'
+          reset_button_label: Attīrīt
+          exposed_sorts_label: 'Kārtot pēc'
           expose_sort_order: true
           sort_asc_label: Asc
-          sort_desc_label: Desc
+          sort_desc_label: Dilst.
       access:
         type: perm
         options:
@@ -188,7 +188,7 @@ display:
       tags: {  }
   block_1:
     id: block_1
-    display_title: Block
+    display_title: Bloks
     display_plugin: block
     position: 1
     display_options:
@@ -227,7 +227,7 @@ display:
       tags: {  }
   page_1:
     id: page_1
-    display_title: Page
+    display_title: Lapa
     display_plugin: page
     position: 2
     display_options:

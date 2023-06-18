@@ -1,0 +1,13 @@
+uuid: e9400e01-ed87-4011-a7b1-3b55c635fd22
+langcode: lv
+status: true
+dependencies:
+  enforced:
+    module:
+      - devel
+_core:
+  default_config_hash: 3V-l1uuTcyirYOGLPZV5HWaDfr02uEbWZJIwc8Byz-c
+id: devel
+label: Izstrāde
+description: 'Links related to Devel module.'
+locked: true

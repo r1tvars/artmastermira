@@ -1,5 +1,5 @@
 uuid: 141992c8-c410-4f7b-ae82-3c253f2e378e
-langcode: en
+langcode: lv
 status: true
 dependencies:
   module:
@@ -16,7 +16,7 @@ provider: null
 plugin: system_main_block
 settings:
   id: system_main_block
-  label: 'Main page content'
+  label: 'Galvenās lapas saturs'
   label_display: '0'
   provider: system
 visibility: {  }

@@ -1,5 +1,5 @@
 uuid: 0976a3ab-b4a4-4d43-b068-0f8ed0c1235f
-langcode: en
+langcode: lv
 status: false
 dependencies:
   module:
@@ -7,6 +7,6 @@ dependencies:
 _core:
   default_config_hash: fVFfJv_GzBRE-wpRHbfD5a3VjnhbEOXG6lvRd3uaccY
 id: node.search_index
-label: 'Search index'
+label: 'Meklēšanas indekss'
 targetEntityType: node
 cache: true

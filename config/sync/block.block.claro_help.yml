@@ -1,5 +1,5 @@
 uuid: 460e477d-9ef8-4b21-852d-90c6fb224500
-langcode: en
+langcode: lv
 status: true
 dependencies:
   module:
@@ -16,7 +16,7 @@ provider: null
 plugin: help_block
 settings:
   id: help_block
-  label: Help
+  label: Palīdzība
   label_display: '0'
   provider: help
 visibility: {  }

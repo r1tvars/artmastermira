@@ -1,5 +1,5 @@
 uuid: bf57bab8-9c37-49f1-9bb5-baff66fe761f
-langcode: en
+langcode: lv
 status: true
 dependencies:
   module:
@@ -9,7 +9,7 @@ dependencies:
 _core:
   default_config_hash: S_NN2ubd_NovTfgzbHVlZMmIJJQS-3h9h3inzbaFUMY
 id: comments_recent
-label: 'Recent comments'
+label: 'Jaunākie komentāri'
 module: views
 description: 'Recent comments.'
 tag: default
@@ -18,11 +18,11 @@ base_field: cid
 display:
   default:
     id: default
-    display_title: Default
+    display_title: 'Noklusētā vērtība'
     display_plugin: default
     position: 0
     display_options:
-      title: 'Recent comments'
+      title: 'Jaunākie komentāri'
       fields:
         subject:
           id: subject
@@ -158,7 +158,7 @@ display:
           plugin_id: text_custom
           label: ''
           empty: true
-          content: 'No comments available.'
+          content: 'Nav pieejami komentāri.'
           tokenize: false
       sorts:
         created:
@@ -252,12 +252,12 @@ display:
       tags: {  }
   block_1:
     id: block_1
-    display_title: Block
+    display_title: Bloks
     display_plugin: block
     position: 1
     display_options:
       display_extenders: {  }
-      block_description: 'Recent comments'
+      block_description: 'Jaunākie komentāri'
       block_category: 'Lists (Views)'
       allow:
         items_per_page: true

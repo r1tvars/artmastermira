@@ -1,5 +1,5 @@
 uuid: 36f2c767-823c-40bd-bfba-6588c06860ad
-langcode: en
+langcode: lv
 status: true
 dependencies:
   module:
@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: LhdsoZPL_pFas2fjaAWue4zvrQ_tEVofLYtcNec-JGM
 id: node_save_action
-label: 'Save content'
+label: 'Saglabāt saturu'
 type: node
 plugin: 'entity:save_action:node'
 configuration: {  }

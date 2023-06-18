@@ -1,5 +1,5 @@
 uuid: 45aa5b4c-348c-4fad-8852-d79f15025410
-langcode: en
+langcode: lv
 status: true
 dependencies:
   theme:
@@ -14,7 +14,7 @@ provider: null
 plugin: local_tasks_block
 settings:
   id: local_tasks_block
-  label: 'Secondary tabs'
+  label: 'Sekundārās cilnes'
   label_display: '0'
   provider: core
   primary: false

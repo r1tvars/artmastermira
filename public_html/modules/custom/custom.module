@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * Implements hook_theme_suggestions_alter().
+ */
+function custom_theme_suggestions_alter(array &$suggestions, array $variables, $hook) {
+    if($hook == 'menu'){
+        $menus = ['main-lv', 'main-ru'];
+        if(in_array($variables['menu_name'], $menus)){
+            $suggestions[] = $hook . '__heder_menu';
+        }
+    }
+}

@@ -1,10 +1,10 @@
 uuid: 451f34d8-c455-4dfd-bf62-b07d78dc5b7f
-langcode: en
+langcode: lv
 status: true
 dependencies: {  }
 _core:
   default_config_hash: NIKBt6kw_uPhNI0qtR2DnRf7mSOgAQdx7Q94SKMjXbQ
-name: 'Plain text'
+name: 'Atklāts teksts'
 format: plain_text
 weight: 10
 filters:

@@ -1,5 +1,5 @@
 uuid: e2054f03-1abf-430c-b952-11dab1b80d95
-langcode: en
+langcode: lv
 status: true
 dependencies:
   module:
@@ -7,6 +7,6 @@ dependencies:
 _core:
   default_config_hash: '-PPKjsNQPvoIDjOuUAvlLocYD976MNjb9Zpgyz5_BWE'
 id: taxonomy_term.full
-label: 'Taxonomy term page'
+label: 'Taksonomijas terminu lapa'
 targetEntityType: taxonomy_term
 cache: true

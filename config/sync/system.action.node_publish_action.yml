@@ -1,5 +1,5 @@
 uuid: 245e72ed-ff3d-4c4d-b754-03baaaea216d
-langcode: en
+langcode: lv
 status: true
 dependencies:
   module:
@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: 2B9uF8NL5gutNKSdPRAhhAsDWFZZG1PJOBmx0aBGd_0
 id: node_publish_action
-label: 'Publish content'
+label: 'Publicēt saturu'
 type: node
 plugin: 'entity:publish_action:node'
 configuration: {  }

@@ -1,6 +1,6 @@
 _core:
   default_config_hash: 6CZIzFifRq3qbdq3n3nDpEOO4hWIQtKOAQNPvGNGKeM
-langcode: en
+langcode: lv
 cancel_confirm:
   subject: 'Account cancellation request for [user:display-name] at [site:name]'
   body: |-
@@ -18,53 +18,14 @@ cancel_confirm:
 
     --  [site:name] team
 password_reset:
-  subject: 'Replacement login information for [user:display-name] at [site:name]'
-  body: |-
-    [user:display-name],
-
-    A request to reset the password for your account has been made at [site:name].
-
-    You may now log in by clicking this link or copying and pasting it into your browser:
-
-    [user:one-time-login-url]
-
-    This link can only be used once to log in and will lead you to a page where you can set your password. It expires after one day and nothing will happen if it's not used.
-
-    --  [site:name] team
+  subject: 'Lietotāja [user:display-name] pieejas datu maiņa vietnē [site:name]'
+  body: "[user:display-name],\r\n\r\nVietnē [site:name] tika veikts Jūsu konta paroles attiestatīšanas pieprasījums.\r\n\r\nJūs varat pieslēgties klikšķinot uz šīs saites vai iekopējot to savā pārlūkprogrammā:\r\n\r\n[user:one-time-login-url]\r\n\r\nŠo saiti var izmantot tikai vienu reizi un tā Jūs novirzīs uz lapu, kur varēsiet uzstādīt savu paroli. Saite ir derīga vienu dienu, nekas netiks mainīts, ja to neizmantosiet.\r\n\r\n--  [site:name] komanda"
 register_admin_created:
-  subject: 'An administrator created an account for you at [site:name]'
-  body: |-
-    [user:display-name],
-
-    A site administrator at [site:name] has created an account for you. You may now log in by clicking this link or copying and pasting it into your browser:
-
-    [user:one-time-login-url]
-
-    This link can only be used once to log in and will lead you to a page where you can set your password.
-
-    After setting your password, you will be able to log in at [site:login-url] in the future using:
-
-    username: [user:name]
-    password: Your password
-
-    --  [site:name] team
+  subject: 'Administrators ir izveidojis Jums kontu vietnē [site:name]'
+  body: "[user:display-name],\r\n\r\nVietnes [site:name] administrators ir izveidojis Jums kontu. Jūs varat pieslēgties, klikšķinot uz šīs saites vai iekopējot to savā pārlūkprogrammā:\r\n\r\n[user:one-time-login-url]\r\n\r\nŠo saiti var izmantot tikai vienu reizi un tā Jūs novirzīs uz lapu, kurā varēsiet uzstādīt savu paroli.\r\n\r\nPēc paroles uzstādīšanas Jūs varēsiet pieslēgties vietnei [site:login-url], izmantojot šādus pieejas datus:\r\n\r\nlietotāja vārds: [user:name]\r\nparole: Jūsu parole\r\n\r\n--  [site:name] komanda"
 register_no_approval_required:
   subject: 'Account details for [user:display-name] at [site:name]'
-  body: |-
-    [user:display-name],
-
-    Thank you for registering at [site:name]. You may now log in by clicking this link or copying and pasting it into your browser:
-
-    [user:one-time-login-url]
-
-    This link can only be used once to log in and will lead you to a page where you can set your password.
-
-    After setting your password, you will be able to log in at [site:login-url] in the future using:
-
-    username: [user:name]
-    password: Your password
-
-    --  [site:name] team
+  body: "[user:display-name],\r\n\r\nPaldies, ka reģistrējāties [site:name]. Jūs varat pieslēgties, klikšķinot uz šīs saites vai iekopējot to savā pārlūkprogrammā:\r\n\r\n[user:one-time-login-url]\r\n\r\nŠo saiti var izmantot tikai vienu reizi un tā Jūs novirzīs uz lapu, kurā varēsiet uzstādīt savu paroli.\r\n\r\nPēc paroles uzstādīšanas Jūs varēsiet pieslēgties vietnei [site:login-url], izmantojot šādus pieejas datus:\r\n\r\nlietotāja vārds: [user:name]\r\nparole: Jūsu parole\r\n\r\n--  [site:name] komanda"
 register_pending_approval:
   subject: 'Account details for [user:display-name] at [site:name] (pending admin approval)'
   body: |-

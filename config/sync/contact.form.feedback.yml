@@ -1,5 +1,5 @@
 uuid: fe186c63-ca8a-41ee-959f-98161f0efb8e
-langcode: en
+langcode: lv
 status: true
 dependencies: {  }
 _core:
@@ -10,5 +10,5 @@ recipients:
   - ritvars.resnis@gmail.com
 reply: ''
 weight: 0
-message: 'Your message has been sent.'
+message: 'Jūsu vēstule nosūtīta.'
 redirect: ''

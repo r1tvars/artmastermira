@@ -1,5 +1,5 @@
 uuid: 74cf199c-2dcd-468c-9260-da2bc397df76
-langcode: en
+langcode: lv
 status: true
 dependencies:
   module:
@@ -7,7 +7,7 @@ dependencies:
 _core:
   default_config_hash: vpBH8OmL4sdesCdeZLsW8KOutB5gkbreWJbfjhfFKaQ
 id: comment_delete_action
-label: 'Delete comment'
+label: 'Dzēst komentāru'
 type: comment
 plugin: 'entity:delete_action:comment'
 configuration: {  }

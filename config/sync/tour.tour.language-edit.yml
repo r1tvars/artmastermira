@@ -1,5 +1,5 @@
 uuid: 2503cfaa-9347-49b0-9c06-d76fd08e08c2
-langcode: en
+langcode: lv
 status: true
 dependencies:
   module:
@@ -22,14 +22,14 @@ tips:
   language-edit-langcode:
     id: language-edit-langcode
     plugin: text
-    label: 'Language code'
+    label: 'Valodas kods'
     weight: 2
     selector: '#edit-langcode-view'
     body: '<p>You cannot change the code of a language on the site, since it is used by the system to keep track of the language.</p>'
   language-edit-label:
     id: language-edit-label
     plugin: text
-    label: 'Language name'
+    label: 'Valodas nosaukums'
     weight: 3
     selector: '#edit-label'
     body: '<p>The language name is used throughout the site for all users and is written in English. Names of built-in languages can be translated using the Interface Translation module, and names of both built-in and custom languages can be translated using the Configuration Translation module.</p>'

@@ -19,9 +19,11 @@
         "drupal/core-composer-scaffold": "^10.0",
         "drupal/core-project-message": "^10.0",
         "drupal/core-recommended": "^10.0",
+        "drupal/devel": "^5.1",
         "drupal/gin": "*",
         "drupal/gin_login": "^2.0",
-        "drupal/gin_toolbar": "^1.0@RC"
+        "drupal/gin_toolbar": "^1.0@RC",
+        "kint-php/kint": "^5.0"
     },
     "conflict": {
         "drupal/drupal": "*"
