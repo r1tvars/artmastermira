@@ -1,8 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "dev": "npx tailwindcss --input src/tailwind.pcss --output dist/tailwind.css --watch",
-    "build": "npx tailwindcss --input src/tailwind.pcss --output dist/tailwind.css --minify"
+    "dev": "npx tailwindcss --input src/artmastermira.pcss --output dist/artmastermira.css --watch",
+    "build": "npx tailwindcss --input src/artmastermira.pcss --output dist/artmastermira.css --minify"
   },
   "dependencies": {
     "postcss": "^8.4.5",
