@@ -1,0 +1,22 @@
+uuid: 221c9ce2-0f7c-42c2-b741-343d4b26056a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - artmastermira
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: artmastermira_content
+theme: artmastermira
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

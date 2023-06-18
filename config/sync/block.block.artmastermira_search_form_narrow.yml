@@ -1,0 +1,23 @@
+uuid: cabbc7cf-b6f4-4cc6-acee-98a9e6a1a0aa
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - artmastermira
+_core:
+  default_config_hash: yEBET0cqDbk8dkWzaJw-8CKft0961VBflsISoSR6Lj8
+id: artmastermira_search_form_narrow
+theme: artmastermira
+region: primary_menu
+weight: -4
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (narrow)'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

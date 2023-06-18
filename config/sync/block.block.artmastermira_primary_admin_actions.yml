@@ -1,0 +1,20 @@
+uuid: 6bc6c0ad-634f-4111-bf97-85dc7e86f3c0
+langcode: en
+status: true
+dependencies:
+  theme:
+    - artmastermira
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: artmastermira_primary_admin_actions
+theme: artmastermira
+region: highlighted
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

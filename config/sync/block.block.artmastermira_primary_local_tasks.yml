@@ -1,0 +1,22 @@
+uuid: 9489be72-2561-489d-b80a-ce1057579da9
+langcode: en
+status: true
+dependencies:
+  theme:
+    - artmastermira
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: artmastermira_primary_local_tasks
+theme: artmastermira
+region: highlighted
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }
