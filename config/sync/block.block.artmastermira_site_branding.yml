@@ -10,7 +10,7 @@ _core:
   default_config_hash: n_nlgjggHVfQt2H__zvLOKB2YtjPDbQ5tHijF9LE1aM
 id: artmastermira_site_branding
 theme: artmastermira
-region: header
+region: site_branding
 weight: 0
 provider: null
 plugin: system_branding_block

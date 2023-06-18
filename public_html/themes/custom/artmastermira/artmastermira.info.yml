@@ -6,3 +6,11 @@ type: theme
 base theme: stable9
 libraries:
   - artmastermira/global-styling
+
+regions:
+  site_branding: Site branding
+  header_content: Header content
+  header_menu: Header menu
+  content: Content
+  pre_footer: Pre footer
+  footer: Footer
