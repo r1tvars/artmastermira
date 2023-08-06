@@ -48,7 +48,6 @@
         $('.mobile-menu-close').on('click', function(){
             $('body').removeClass('overflow-y-hidden');
             $('.mobile-menu-close').addClass('hidden');
-            $('.mobile-menu-bottom').addClass('hidden');
             $('.mobile-menu').removeClass('hidden');
             setTimeout(() => {
                 $('.menu__popover').animate({
@@ -57,6 +56,7 @@
                 $('.mobile-menu-content').hide().html('');
                 $('.site-logo path').css({fill: "#fff", transition: "1.0s"});
                 $('.menu__popover').addClass('hidden');
+                $('.mobile-menu-bottom').addClass('hidden');
             }, 100);
         });
       });
