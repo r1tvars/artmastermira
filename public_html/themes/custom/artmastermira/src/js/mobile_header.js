@@ -12,7 +12,7 @@
       $(document).ready(function (e) {
         var windowHeight, content;
         windowHeight = $(window).outerHeight();
-        $('body').append(`<div class="menu__popover hidden" style="top: -${windowHeight}px;">
+        $('body').append(`<div class="menu__popover hidden" style="top: -${windowHeight+200}px;">
             <div class="mobile-menu-content hidden"></div>
             <div class="mobile-menu-bottom flex w-full z-10 absolute bottom-0 rotate-180 hidden">
                 <div class="flex lg:basis-2/5 basis-1/5 h-[50px] bg-darkGray"></div>
@@ -52,7 +52,7 @@
             $('.mobile-menu').removeClass('hidden');
             setTimeout(() => {
                 $('.menu__popover').animate({
-                    top: -windowHeight
+                    top: -windowHeight-200
                 }, 'fast');
                 $('.mobile-menu-content').hide().html('');
                 $('.site-logo path').css({fill: "#fff", transition: "1.0s"});
