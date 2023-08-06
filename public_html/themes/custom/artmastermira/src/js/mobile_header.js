@@ -14,7 +14,7 @@
         windowHeight = $(window).outerHeight();
         $('body').append(`<div class="menu__popover hidden" style="top: -${windowHeight}px;">
             <div class="mobile-menu-content hidden"></div>
-            <div class="flex w-full z-10 absolute bottom-0 rotate-180">
+            <div class="mobile-menu-bottom flex w-full z-10 absolute bottom-0 rotate-180 hidden">
                 <div class="flex lg:basis-2/5 basis-1/5 h-[50px] bg-darkGray"></div>
                 <div class="flex flex-1 relative">
                 <div class="flex w-[40px] bg-darkGray absolute inset-0 top-left-cut left-[-2px]"></div>
@@ -36,6 +36,7 @@
         $('.mobile-menu').on('click', function(){
             $('.mobile-menu').addClass('hidden');
             $('.mobile-menu-close').removeClass('hidden');
+            $('.mobile-menu-bottom').removeClass('hidden');
             $('body').addClass('overflow-y-hidden');
             $('.menu__popover').removeClass('hidden');
             menu_animate();
@@ -47,6 +48,7 @@
         $('.mobile-menu-close').on('click', function(){
             $('body').removeClass('overflow-y-hidden');
             $('.mobile-menu-close').addClass('hidden');
+            $('.mobile-menu-bottom').addClass('hidden');
             $('.mobile-menu').removeClass('hidden');
             setTimeout(() => {
                 $('.menu__popover').animate({

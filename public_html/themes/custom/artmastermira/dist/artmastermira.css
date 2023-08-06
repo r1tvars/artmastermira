@@ -605,10 +605,6 @@ input{
   position: relative;
 }
 
-.sticky{
-  position: sticky;
-}
-
 .inset-0{
   inset: 0px;
 }
@@ -621,20 +617,12 @@ input{
   bottom: 55px;
 }
 
-.left-0{
-  left: 0px;
-}
-
 .left-1\/2{
   left: 50%;
 }
 
 .left-\[-2px\]{
   left: -2px;
-}
-
-.right-0{
-  right: 0px;
 }
 
 .right-\[-2px\]{
@@ -645,24 +633,12 @@ input{
   top: 2rem;
 }
 
-.top-\[105px\]{
-  top: 105px;
-}
-
-.top-0{
-  top: 0px;
-}
-
 .top-\[75px\]{
   top: 75px;
 }
 
 .z-10{
   z-index: 10;
-}
-
-.z-50{
-  z-index: 50;
 }
 
 .m-auto{
@@ -721,10 +697,6 @@ input{
   height: 520px;
 }
 
-.h-\[820px\]{
-  height: 820px;
-}
-
 .h-\[694px\]{
   height: 694px;
 }
@@ -751,18 +723,6 @@ input{
 
 .w-full{
   width: 100%;
-}
-
-.w-1\/2{
-  width: 50%;
-}
-
-.w-auto{
-  width: auto;
-}
-
-.min-w-\[50\%\]{
-  min-width: 50%;
 }
 
 .max-w-\[1170px\]{
@@ -916,6 +876,10 @@ input{
   padding-top: 40px;
 }
 
+.pt-\[52px\]{
+  padding-top: 52px;
+}
+
 .text-center{
   text-align: center;
 }
@@ -1056,13 +1020,13 @@ body{
 }
 
 .top-left-cut{
-  -webkit-clip-path: polygon(0 0, 100% 0%, 0% 106%, 0% 100%);
-          clip-path: polygon(0 0, 100% 0%, 0% 106%, 0% 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0%, 0% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0%, 0% 100%, 0% 100%);
 }
 
 .top-right-cut{
-  -webkit-clip-path: polygon(0% 0%, 100% 0%, 95% 100%, 0 0%);
-          clip-path: polygon(0% 0%, 100% 0%, 95% 100%, 0 0%);
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 0%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0 0%);
 }
 
 .site-logo path{
@@ -1105,16 +1069,8 @@ body{
 }
 
 @media (min-width: 768px){
-  .md\:block{
-    margin-bottom: 1rem;
-  }
-
   .md\:top-\[105px\]{
     top: 105px;
-  }
-
-  .md\:block{
-    display: block;
   }
 
   .md\:flex{
@@ -1137,19 +1093,14 @@ body{
     justify-content: normal;
   }
 
-  .md\:px-3{
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-  }
-
   .md\:px-0{
     padding-left: 0px;
     padding-right: 0px;
   }
 
-  .md\:text-3xl{
-    font-size: 1.875rem;
-    line-height: 2.25rem;
+  .md\:px-3{
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
 
   .md\:text-6xl{

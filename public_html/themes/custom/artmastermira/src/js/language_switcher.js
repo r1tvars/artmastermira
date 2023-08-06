@@ -10,8 +10,15 @@
   
     function processingCallback() {
       $(document).ready(function (e) {
-        $('span.language').on('click', function(event){
+        $('.language').on('click', function(event){
           $('.language-block').toggleClass('hidden');
+        });
+        $(document).click(function(event) {
+          if(!$(event.target).closest('.language').length){
+            if($('.language-block').is(':visible')){
+              $('.language-block').toggleClass('hidden');
+            }
+          }
         });
       });
     }
