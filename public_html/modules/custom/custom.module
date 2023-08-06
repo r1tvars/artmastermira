@@ -19,7 +19,7 @@ function custom_theme_suggestions_alter(array &$suggestions, array $variables, $
  */
 function custom_preprocess_block(&$variables) {
     $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
-    if($variables['plugin_id'] == 'block_content:96d6099b-467d-4d74-80c6-067871537539'){
+    if($variables['plugin_id'] == 'views_block:first_page_header-block_1'){
         $config = \Drupal::config('system.site');
         $variables['site_name'] = $config->get('name');
         $variables['site_slogan'] = $config->get('slogan');
