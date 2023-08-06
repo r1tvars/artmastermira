@@ -31,7 +31,7 @@
                     top: 0
                 }, 'fast');
                 $('.site-logo path').css({fill: "#292d33", transition: "1.0s"});
-            }, 100);
+            }, 300);
         }
         $('.mobile-menu').on('click', function(){
             $('.mobile-menu').addClass('hidden');
@@ -57,7 +57,7 @@
                 $('.site-logo path').css({fill: "#fff", transition: "1.0s"});
                 $('.menu__popover').addClass('hidden');
                 $('.mobile-menu-bottom').addClass('hidden');
-            }, 100);
+            }, 300);
         });
       });
      
