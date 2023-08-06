@@ -16,10 +16,10 @@
             <div class="mobile-menu-content hidden"></div>
             <div class="mobile-menu-bottom flex w-full z-10 absolute bottom-0 rotate-180 hidden">
                 <div class="flex lg:basis-2/5 basis-1/5 h-[50px] bg-darkGray"></div>
-                <div class="flex flex-1 relative">
-                <div class="flex w-[40px] bg-darkGray absolute inset-0 top-left-cut left-[-2px]"></div>
+                <div class="flex flex-1 relative overflow-hidden">
+                <div class="flex w-[40px] bg-darkGray absolute inset-0 top-left-cut left-[-2px] pt-[52px]"></div>
                 <div class="flex h-1/2 w-full bg-darkGray"></div>
-                <div class="flex w-[40px] bg-darkGray absolute inset-0 ml-auto top-right-cut right-[-2px]"></div>
+                <div class="flex w-[40px] bg-darkGray absolute inset-0 ml-auto top-right-cut right-[-2px] pt-[52px]"></div>
                 </div>
                 <div class="flex lg:basis-2/5 basis-1/5 h-[50px] bg-darkGray ml-auto"></div>
             </div>
@@ -56,6 +56,7 @@
                 }, 'fast');
                 $('.mobile-menu-content').hide().html('');
                 $('.site-logo path').css({fill: "#fff", transition: "1.0s"});
+                $('.menu__popover').addClass('hidden');
             }, 100);
         });
       });
