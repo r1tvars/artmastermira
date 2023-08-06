@@ -1,0 +1,20 @@
+uuid: aaf16cc1-762c-421a-9274-c62d7caffcbd
+langcode: lv
+status: true
+dependencies:
+  config:
+    - media.type.audio
+  module:
+    - path
+id: media.audio.path
+field_name: path
+entity_type: media
+bundle: audio
+label: 'URL aizstājvārds'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

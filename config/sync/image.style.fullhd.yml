@@ -1,0 +1,15 @@
+uuid: 7b235703-0fef-49b6-889b-be48b02d1676
+langcode: lv
+status: true
+dependencies: {  }
+name: fullhd
+label: FullHd
+effects:
+  f9cfb717-aebd-4ae4-9b22-d7c7bd1e0204:
+    uuid: f9cfb717-aebd-4ae4-9b22-d7c7bd1e0204
+    id: image_scale
+    weight: 1
+    data:
+      width: 1920
+      height: null
+      upscale: false

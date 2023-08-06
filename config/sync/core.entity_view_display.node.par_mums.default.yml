@@ -1,0 +1,57 @@
+uuid: e32035e8-509b-4755-b78a-eb43e1dcbe97
+langcode: lv
+status: true
+dependencies:
+  config:
+    - field.field.node.par_mums.body
+    - field.field.node.par_mums.field_attels
+    - field.field.node.par_mums.field_front_page_about_body
+    - field.field.node.par_mums.field_open_page_image
+    - node.type.par_mums
+  module:
+    - text
+    - user
+id: node.par_mums.default
+targetEntityType: node
+bundle: par_mums
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_attels:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_front_page_about_body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_open_page_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

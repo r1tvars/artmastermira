@@ -1,0 +1,23 @@
+uuid: dcc09d66-584f-4931-88d1-9a11934fef8c
+langcode: lv
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.pirmas_lapas_virsraksts.field_virsraksts
+    - paragraphs.paragraphs_type.pirmas_lapas_virsraksts
+id: paragraph.pirmas_lapas_virsraksts.default
+targetEntityType: paragraph
+bundle: pirmas_lapas_virsraksts
+mode: default
+content:
+  field_virsraksts:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

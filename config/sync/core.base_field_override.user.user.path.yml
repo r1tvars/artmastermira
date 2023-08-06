@@ -1,0 +1,19 @@
+uuid: 9b22c9da-1f35-4e58-9545-9ebc808db344
+langcode: lv
+status: true
+dependencies:
+  module:
+    - path
+    - user
+id: user.user.path
+field_name: path
+entity_type: user
+bundle: user
+label: 'URL aizstājvārds'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

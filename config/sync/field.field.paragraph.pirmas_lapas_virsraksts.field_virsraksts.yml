@@ -1,0 +1,19 @@
+uuid: d2dcafa7-d05c-4072-bc9d-5dd71bf49d01
+langcode: lv
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_virsraksts
+    - paragraphs.paragraphs_type.pirmas_lapas_virsraksts
+id: paragraph.pirmas_lapas_virsraksts.field_virsraksts
+field_name: field_virsraksts
+entity_type: paragraph
+bundle: pirmas_lapas_virsraksts
+label: Virsraksts
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

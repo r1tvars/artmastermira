@@ -1,0 +1,18 @@
+uuid: 896a47f3-83ce-45f4-9875-9dd28627b055
+langcode: lv
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'Par mums'
+type: par_mums
+description: 'Apraksts par un ap uzņēmumu'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

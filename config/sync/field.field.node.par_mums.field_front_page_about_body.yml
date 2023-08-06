@@ -1,0 +1,21 @@
+uuid: c2427224-6513-4e3a-85b4-2782525aa8d8
+langcode: lv
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_front_page_about_body
+    - node.type.par_mums
+  module:
+    - text
+id: node.par_mums.field_front_page_about_body
+field_name: field_front_page_about_body
+entity_type: node
+bundle: par_mums
+label: 'Pirmās lapas apraksts'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

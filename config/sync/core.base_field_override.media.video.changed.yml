@@ -1,0 +1,18 @@
+uuid: 88feb817-bc1e-4c57-836e-5e345eb49c7b
+langcode: lv
+status: true
+dependencies:
+  config:
+    - media.type.video
+id: media.video.changed
+field_name: changed
+entity_type: media
+bundle: video
+label: Labots
+description: 'The time the media item was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

@@ -1,0 +1,22 @@
+uuid: e4ac924e-f8ca-4cce-ad02-7321eb7906be
+langcode: lv
+status: true
+dependencies:
+  config:
+    - media.type.video
+id: media.video.status
+field_name: status
+entity_type: media
+bundle: video
+label: Publicēts
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Aktīvs
+  off_label: Izslēgts
+field_type: boolean

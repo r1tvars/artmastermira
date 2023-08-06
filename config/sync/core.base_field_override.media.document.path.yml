@@ -1,0 +1,20 @@
+uuid: ceaeaa76-9dec-4826-9609-1a4a3f26d5dd
+langcode: lv
+status: true
+dependencies:
+  config:
+    - media.type.document
+  module:
+    - path
+id: media.document.path
+field_name: path
+entity_type: media
+bundle: document
+label: 'URL aizstājvārds'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

@@ -6,6 +6,10 @@ type: theme
 base theme: stable9
 libraries:
   - artmastermira/global-styling
+  - artmastermira/fontawesome
+  - artmastermira/language_switcher
+  - artmastermira/scroll_to_content
+  - artmastermira/mobile_header
 
 regions:
   site_branding: Site branding

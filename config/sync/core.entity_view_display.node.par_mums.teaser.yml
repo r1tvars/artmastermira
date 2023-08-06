@@ -1,0 +1,37 @@
+uuid: 4ac7336e-844c-412c-94e5-7180f74892fc
+langcode: lv
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.par_mums.body
+    - field.field.node.par_mums.field_attels
+    - field.field.node.par_mums.field_front_page_about_body
+    - field.field.node.par_mums.field_open_page_image
+    - node.type.par_mums
+  module:
+    - text
+    - user
+id: node.par_mums.teaser
+targetEntityType: node
+bundle: par_mums
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_attels: true
+  field_front_page_about_body: true
+  field_open_page_image: true
+  langcode: true

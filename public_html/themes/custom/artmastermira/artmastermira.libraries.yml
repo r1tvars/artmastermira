@@ -2,3 +2,35 @@ global-styling:
   css:
     base:
       dist/artmastermira.css: {}
+
+fontawesome: 
+  version: VERSION
+  js:
+    https://kit.fontawesome.com/e35a5ab011.js: {type: external, minified: true}
+
+language_switcher:
+  version: VERSION
+  js:
+    src/js/language_switcher.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/once
+
+scroll_to_content:
+  version: VERSION
+  js:
+    src/js/scroll_to_content.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/once
+
+mobile_header:
+  version: VERSION
+  js:
+    src/js/mobile_header.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/once

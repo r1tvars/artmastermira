@@ -4,11 +4,11 @@ langcode: lv
 uuid: 6596bdfe-5cca-41aa-a2d6-1d332651961c
 name: ArtMasterMira
 mail: ritvars.resnis@gmail.com
-slogan: ''
+slogan: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam malesuada diam interdum urna mollis, ut malesuada augue elementum. Morbi ac mattis elit.'
 page:
   403: ''
   404: ''
   front: /node/2
 admin_compact_mode: false
 weight_select_max: 100
-default_langcode: lv
+default_langcode: ru

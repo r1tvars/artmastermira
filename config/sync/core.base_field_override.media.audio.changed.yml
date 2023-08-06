@@ -1,0 +1,18 @@
+uuid: 599f19e7-5a99-49f7-bf47-34f7e89d5f40
+langcode: lv
+status: true
+dependencies:
+  config:
+    - media.type.audio
+id: media.audio.changed
+field_name: changed
+entity_type: media
+bundle: audio
+label: Labots
+description: 'The time the media item was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

@@ -1,0 +1,22 @@
+uuid: 43d0abe0-add5-4bee-91b2-b7fe9c91a71b
+langcode: lv
+status: true
+dependencies:
+  config:
+    - media.type.image
+id: media.image.status
+field_name: status
+entity_type: media
+bundle: image
+label: Publicēts
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Aktīvs
+  off_label: Izslēgts
+field_type: boolean

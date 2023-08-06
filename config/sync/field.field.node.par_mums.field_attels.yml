@@ -1,0 +1,29 @@
+uuid: 0b31461a-5a3f-449e-b0d7-987e7da848ab
+langcode: lv
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_attels
+    - media.type.image
+    - node.type.par_mums
+id: node.par_mums.field_attels
+field_name: field_attels
+entity_type: node
+bundle: par_mums
+label: 'Bloka attēls'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

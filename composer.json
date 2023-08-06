@@ -16,6 +16,7 @@
     ],
     "require": {
         "composer/installers": "^2.0",
+        "cweagans/composer-patches": "^1.7",
         "drupal/core-composer-scaffold": "^10.0",
         "drupal/core-project-message": "^10.0",
         "drupal/core-recommended": "^10.0",
@@ -23,7 +24,11 @@
         "drupal/gin": "*",
         "drupal/gin_login": "^2.0",
         "drupal/gin_toolbar": "^1.0@RC",
+        "drupal/media_library_edit": "^3.0",
+        "drupal/media_library_form_element": "^2.0",
         "drupal/metatag": "^1.25",
+        "drupal/paragraphs": "^1.15",
+        "drupal/paragraphs_asymmetric_translation_widgets": "^1.2",
         "drupal/pathauto": "^1.11",
         "kint-php/kint": "^5.0"
     },
@@ -38,7 +43,8 @@
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
             "phpstan/extension-installer": true,
-            "dealerdirect/phpcodesniffer-composer-installer": true
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "cweagans/composer-patches": true
         },
         "sort-packages": true
     },
@@ -97,6 +103,18 @@
                 "  * Remove the plugin that prints this message:",
                 "      composer remove drupal/core-project-message"
             ]
+        },
+        "enable-patching": true,
+        "patches": {
+            "drupal/core": {
+                "[regression] Language switcher block returns links to node on the frontpage": "https://www.drupal.org/files/issues/2023-05-16/3351458.patch"
+            },
+            "drupal/devel": {
+                "Brings back the Available Methods & Properties tabs for Kint dumps — Issue #221": "https://raw.githubusercontent.com/politsin/snipets/master/patch/kint.patch"
+            },
+            "drupal/pathauto": {
+                "PHP 8.2 compatibility": "https://www.drupal.org/files/issues/2022-12-21/php8.2notice-pathauto-3328670.patch"
+            }
         }
     }
 }

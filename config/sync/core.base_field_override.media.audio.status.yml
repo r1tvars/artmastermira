@@ -1,0 +1,22 @@
+uuid: 1524b084-0695-458f-a135-f752a6ff3087
+langcode: lv
+status: true
+dependencies:
+  config:
+    - media.type.audio
+id: media.audio.status
+field_name: status
+entity_type: media
+bundle: audio
+label: Publicēts
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Aktīvs
+  off_label: Izslēgts
+field_type: boolean

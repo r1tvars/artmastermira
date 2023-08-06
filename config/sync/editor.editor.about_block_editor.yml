@@ -1,0 +1,25 @@
+uuid: 5264b654-855b-4207-b663-b03526f5c130
+langcode: lv
+status: true
+dependencies:
+  config:
+    - filter.format.about_block_editor
+  module:
+    - ckeditor5
+format: about_block_editor
+editor: ckeditor5
+settings:
+  toolbar:
+    items:
+      - heading
+      - bold
+      - italic
+  plugins:
+    ckeditor5_heading:
+      enabled_headings:
+        - heading2
+        - heading3
+        - heading4
+        - heading5
+        - heading6
+image_upload: {  }

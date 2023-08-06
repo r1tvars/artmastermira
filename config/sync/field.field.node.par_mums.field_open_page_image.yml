@@ -1,0 +1,29 @@
+uuid: 5de46b77-02d4-4dbd-bb12-7da9e8179053
+langcode: lv
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_open_page_image
+    - media.type.image
+    - node.type.par_mums
+id: node.par_mums.field_open_page_image
+field_name: field_open_page_image
+entity_type: node
+bundle: par_mums
+label: 'Lapas attēls'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

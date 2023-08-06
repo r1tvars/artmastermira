@@ -45,17 +45,70 @@
  * @ingroup themeable
  */
 #}
-<div class="container p-4 mx-auto">
+<div class="relative content-home">
 
   <header role="banner">
-    {{ page.header_menu }}
+    <div class="flex flex-col relative">
+      <div class="flex w-full z-10 absolute">
+        <div class="flex lg:basis-2/5 basis-1/5 h-[50px] bg-darkGray justify-center">
+          <div class="flex items-center relative md:hidden">
+            <div class="relative">
+              <span class="flex language cursor-pointer w-6">
+                {{source('themes/custom/artmastermira/dist/assets/globe.svg')}}
+              </span>
+              <div class="language-block flex bg-white shadow-popover rounded-md p-2 absolute top-8 left-1/2 -translate-x-1/2 hidden">
+                {{ page.header_content }}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-1 relative">
+          <div class="flex w-[40px] bg-darkGray absolute inset-0 top-left-cut left-[-2px]"></div>
+          <div class="flex h-1/2 w-full bg-oldGold"></div>
+          <div class="flex w-[42px] bg-darkGray absolute inset-0 ml-auto top-right-cut right-[-2px]"></div>
+        </div>
+        <div class="flex lg:basis-2/5 basis-1/5 h-[50px] bg-darkGray justify-center ml-auto">
+          <div class="flex items-center relative md:hidden">
+            <div class="relative">
+              <span class="mobile-menu">
+                <i class="fa-solid fa-bars cursor-pointer text-2xl text-white"></i>
+              </span>
+              <span class="mobile-menu-close hidden">
+                <i class="fa-solid fa-x cursor-pointer text-2xl text-white"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="absolute md:top-[105px] top-[75px] w-full px-5">
+          <div class="flex md:justify-normal justify-center max-w-[1170px] m-auto w-full">
+            <div class="max-w-[150px]">
+              {{ page.site_branding }}
+            </div>
+            <div class="md:flex ml-auto gap-[55px] hidden">
+              <div class="header-menu flex items-center text-white font-ptsans font-medium text-3xl">
+                {{ page.header_menu }}
+              </div>
+              <div class="flex items-center relative">
+                <div class="relative">
+                  <span class="flex language cursor-pointer w-6">
+                    {{source('themes/custom/artmastermira/dist/assets/globe.svg')}}
+                  </span>
+                  <div class="language-block flex bg-white shadow-popover rounded-md p-2 absolute top-8 left-1/2 -translate-x-1/2 hidden">
+                    {{ page.header_content }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </header>
 
   <main role="main">
     <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-
-    <div class="-mx-4 md:flex">
-      <div class="p-4 md:flex-1">
+    <div>
+      <div>
         {{ page.content }}
       </div>{# /.layout-content #}
     </div>

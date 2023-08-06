@@ -1,0 +1,20 @@
+uuid: 0865031a-26e5-40e4-a765-0e6031d7c6ef
+langcode: lv
+status: true
+dependencies:
+  config:
+    - media.type.remote_video
+id: media.remote_video.name
+field_name: name
+entity_type: media
+bundle: remote_video
+label: Nosaukums
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

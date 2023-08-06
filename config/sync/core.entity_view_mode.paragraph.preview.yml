@@ -1,0 +1,12 @@
+uuid: 27e8be3b-d6e6-4036-a6ac-55302e26b541
+langcode: lv
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: h3BeHVei4Lnyqbkao3YiF4KqoY-DhRvUNfEgKG8Rgjg
+id: paragraph.preview
+label: Priekšskatījums
+targetEntityType: paragraph
+cache: true

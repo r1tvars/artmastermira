@@ -1,0 +1,20 @@
+uuid: 414851df-ee7c-4cf6-a821-2e4c1514be9e
+langcode: lv
+status: true
+dependencies:
+  config:
+    - media.type.video
+  module:
+    - path
+id: media.video.path
+field_name: path
+entity_type: media
+bundle: video
+label: 'URL aizstājvārds'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

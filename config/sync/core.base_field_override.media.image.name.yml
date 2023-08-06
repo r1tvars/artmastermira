@@ -1,0 +1,20 @@
+uuid: d6b5f009-8293-4f6a-909b-6194bd33eb02
+langcode: lv
+status: true
+dependencies:
+  config:
+    - media.type.image
+id: media.image.name
+field_name: name
+entity_type: media
+bundle: image
+label: Nosaukums
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: ''
+default_value_callback: ''
+settings: {  }
+field_type: string

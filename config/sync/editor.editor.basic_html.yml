@@ -16,6 +16,10 @@ settings:
       - bold
       - italic
       - '|'
+      - alignment
+      - indent
+      - outdent
+      - '|'
       - link
       - '|'
       - bulletedList
@@ -29,6 +33,12 @@ settings:
       - '|'
       - sourceEditing
   plugins:
+    ckeditor5_alignment:
+      enabled_alignments:
+        - center
+        - justify
+        - left
+        - right
     ckeditor5_heading:
       enabled_headings:
         - heading2

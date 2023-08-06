@@ -1,0 +1,20 @@
+uuid: 517b8d3d-84a0-4a0b-95ac-bd984f8b02eb
+langcode: lv
+status: true
+dependencies:
+  config:
+    - media.type.video
+id: media.video.uid
+field_name: uid
+entity_type: media
+bundle: video
+label: Redaktors
+description: 'The user ID of the author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\media\Entity\Media::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

@@ -1,0 +1,22 @@
+uuid: c5ddd180-93d3-44a5-9845-64eb7d12d14b
+langcode: lv
+status: true
+dependencies:
+  config:
+    - media.type.document
+id: media.document.status
+field_name: status
+entity_type: media
+bundle: document
+label: Publicēts
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Aktīvs
+  off_label: Izslēgts
+field_type: boolean

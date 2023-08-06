@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -23,4 +25,83 @@
   [id$="-local-tasks"] ul {
     @apply list-disc list-inside
   }
+  .about-block h2{
+    @apply text-[30px] font-light
+  }
+  .about-block h2, .about-block h3, .about-block h4, .about-block h5, .about-block h6{
+    @apply mb-[19px]
+  }
+  .about-block p{
+    @apply mb-2.5
+  }
+  .about-block p:last-of-type{
+    @apply mb-0
+  }
+}
+
+.cke_editable p {
+  @apply mb-3.5
+}
+.cke_editable h1, .cke_editable h2, .cke_editable h3, .cke_editable h4, .cke_editable h5, .cke_editable h6{
+  @apply mb-6 font-light
+}
+.cke_editable h1{
+  @apply text-h1
+}
+.cke_editable h2{
+  @apply text-h2
+}
+.cke_editable h3{
+  @apply text-h3
+}
+.cke_editable h4{
+  @apply text-h4
+}
+.cke_editable h5{
+  @apply text-h5
+}
+.cke_editable h6{
+  @apply text-h6
+}
+.cke_editable img {
+  @apply rounded-md mb-3.5
+}
+body{
+  overflow-x: hidden;
+}
+body{
+  @apply bg-lotion
+}
+.menu__popover{
+  @apply flex justify-center items-center flex-col bg-oldGold fixed inset-0 px-5 overflow-auto w-full h-full
+}
+.top-left-cut{
+  clip-path: polygon(0 0, 100% 0%, 0% 106%, 0% 100%);
+}
+.top-right-cut{
+  clip-path: polygon(0% 0%, 100% 0%, 95% 100%, 0 0%);
+}
+.site-logo path{
+  fill: #fff;
+}
+.site-logo svg{
+  height: auto;
+}
+.language svg path{
+  fill: #fff;
+}
+.scroller {
+  width: 4px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: #fff;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(15px); opacity: 0;}
 }

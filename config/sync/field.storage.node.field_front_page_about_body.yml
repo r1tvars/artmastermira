@@ -1,0 +1,19 @@
+uuid: 16918548-49e4-4b9a-802d-9b6fe68d0457
+langcode: lv
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_front_page_about_body
+field_name: field_front_page_about_body
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

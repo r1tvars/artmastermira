@@ -1,0 +1,18 @@
+uuid: 10d8d0fc-0cf5-4e6d-b2b4-dd4604e95348
+langcode: lv
+status: true
+dependencies:
+  config:
+    - media.type.video
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: media.video
+target_entity_type_id: media
+target_bundle: video
+default_langcode: site_default
+language_alterable: false

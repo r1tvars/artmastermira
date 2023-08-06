@@ -1,0 +1,18 @@
+uuid: 7dbc0c79-febf-4082-99e8-d937dbe4c313
+langcode: lv
+status: true
+dependencies:
+  config:
+    - media.type.document
+id: media.document.created
+field_name: created
+entity_type: media
+bundle: document
+label: Sagatavots
+description: 'The time the media item was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\media\Entity\Media::getRequestTime'
+settings: {  }
+field_type: created

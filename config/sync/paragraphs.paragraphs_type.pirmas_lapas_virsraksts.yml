@@ -1,0 +1,10 @@
+uuid: d8643a89-0394-4cff-a75b-b72d40dc3864
+langcode: lv
+status: true
+dependencies: {  }
+id: pirmas_lapas_virsraksts
+label: 'Pirmās lapas virsraksts'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

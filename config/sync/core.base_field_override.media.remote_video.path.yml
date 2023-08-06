@@ -1,0 +1,20 @@
+uuid: d57a6fec-3025-4e9e-b124-9739194b40de
+langcode: lv
+status: true
+dependencies:
+  config:
+    - media.type.remote_video
+  module:
+    - path
+id: media.remote_video.path
+field_name: path
+entity_type: media
+bundle: remote_video
+label: 'URL aizstājvārds'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

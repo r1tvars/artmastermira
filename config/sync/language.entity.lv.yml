@@ -3,7 +3,7 @@ langcode: lv
 status: true
 dependencies: {  }
 id: lv
-label: Latvian
+label: Latviešu
 direction: ltr
 weight: 2
 locked: false

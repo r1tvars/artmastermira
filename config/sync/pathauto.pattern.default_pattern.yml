@@ -1,0 +1,24 @@
+uuid: 4adde23d-de00-4e1f-a11e-9afc55bdc7d2
+langcode: lv
+status: true
+dependencies:
+  module:
+    - node
+id: default_pattern
+label: 'Default pattern'
+type: 'canonical_entities:node'
+pattern: '/[node:title]'
+selection_criteria:
+  8403d346-5949-4ab4-89ff-7f7e3efbb3cd:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 8403d346-5949-4ab4-89ff-7f7e3efbb3cd
+    context_mapping:
+      node: node
+    bundles:
+      article: article
+      page: page
+      par_mums: par_mums
+selection_logic: and
+weight: -5
+relationships: {  }
