@@ -29,9 +29,9 @@
             setTimeout(() => {
                 $('.menu__popover').animate({
                     top: 0
-                }, 'fast');
+                }, 300);
                 $('.site-logo path').css({fill: "#292d33", transition: "1.0s"});
-            }, 300);
+            }, 100);
         }
         $('.mobile-menu').on('click', function(){
             $('.mobile-menu').addClass('hidden');
@@ -52,12 +52,12 @@
             setTimeout(() => {
                 $('.menu__popover').animate({
                     top: -windowHeight-200
-                }, 'fast');
+                }, 300);
                 $('.mobile-menu-content').hide().html('');
                 $('.site-logo path').css({fill: "#fff", transition: "1.0s"});
                 $('.menu__popover').addClass('hidden');
                 $('.mobile-menu-bottom').addClass('hidden');
-            }, 300);
+            }, 100);
         });
       });
      
