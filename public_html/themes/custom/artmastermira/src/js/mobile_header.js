@@ -56,8 +56,10 @@
                 $('.mobile-menu-content').hide().html('');
                 $('.site-logo path').css({fill: "#fff", transition: "1.0s"});
                 $('.menu__popover').addClass('hidden');
-                $('.mobile-menu-bottom').addClass('hidden');
             }, 100);
+            setTimeout(() => {
+                $('.mobile-menu-bottom').addClass('hidden');
+            }, 300);
         });
       });
      
