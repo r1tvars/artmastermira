@@ -37,8 +37,69 @@
   .about-block p:last-of-type{
     @apply mb-0
   }
+  .artmaster-contact-form{
+    @apply flex flex-col gap-3
+  }
+  .artmaster-contact-form textarea, .artmaster-contact-form input{
+    @apply w-full h-full border-0 pt-[14px] pb-[7px] px-[6px] bg-lighterGray text-lightWhite outline-0 border-b-[1px] border-borderGray resize-none
+  }
+  .artmaster-contact-form input:-webkit-autofill,
+  .artmaster-contact-form input:-webkit-autofill:hover, 
+  .artmaster-contact-form input:-webkit-autofill:focus,
+  .artmaster-contact-form textarea:-webkit-autofill,
+  .artmaster-contact-form textarea:-webkit-autofill:hover,
+  .artmaster-contact-form textarea:-webkit-autofill:focus,
+  .artmaster-contact-form select:-webkit-autofill,
+  .artmaster-contact-form select:-webkit-autofill:hover,
+  .artmaster-contact-form select:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px #555C66 inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+  .artmaster-contact-form textarea{
+    @apply pt-0 mt-[14px]
+  }
+  .artmaster-contact-form .form-item{
+    @apply relative
+  }
+  .artmaster-contact-form .form-item-email, .artmaster-contact-form .form-item-name{
+    @apply h-[44px]
+  }
+  .artmaster-contact-form .form-item label{
+    @apply absolute left-[6px] top-[10px] ease-in duration-[100ms] text-lightWhite text-[18px]
+  }
+  .artmaster-contact-form .form-item label.active-input{
+    @apply text-[11px] left-[10px] top-[1px] ease-in duration-[100ms]
+  }
+  .artmaster-contact-form .form-item label.active-input{
+    @apply text-[11px] left-[10px] top-[1px] ease-in duration-[100ms]
+  }
+  .artmaster-contact-form .form-item label.error-text-red{
+    @apply text-red
+  }
+  .artmaster-contact-form .webform-actions{
+    @apply flex h-[52px] border-0 rounded-[37px] md:justify-normal justify-center mt-3
+  }
+  .artmaster-contact-form .webform-actions input{
+    @apply w-[175px] border-0 rounded-[37px] bg-oldGold p-0 flex justify-center font-ptsans text-h4 text-darkGray cursor-pointer shadow-md
+  }
 }
 
+.webform-confirmation{
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  color: #FEFDFA;
+  font-family: PT Sans, sans-serif;
+}
+.webform-confirmation__message{
+  margin: 0;
+}
+.ui-widget-header .ui-dialog-titlebar-close{
+  right: 15px !important;
+}
+.ui-widget-header .ui-dialog-titlebar-close .ui-button-icon{
+  height: 20px !important;
+  width: 20px !important;
+}
 .cke_editable p {
   @apply mb-3.5
 }
@@ -89,6 +150,9 @@ body{
 }
 .language svg path{
   fill: #fff;
+}
+.contact-phone svg path, .contact-mail svg path{
+  fill: #F0C871;
 }
 .scroller {
   width: 4px;

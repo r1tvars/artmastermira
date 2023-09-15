@@ -30,6 +30,7 @@
         "drupal/paragraphs": "^1.15",
         "drupal/paragraphs_asymmetric_translation_widgets": "^1.2",
         "drupal/pathauto": "^1.11",
+        "drupal/webform": "^6.2@beta",
         "kint-php/kint": "^5.0"
     },
     "conflict": {
@@ -108,7 +109,8 @@
         "enable-patching": true,
         "patches": {
             "drupal/core": {
-                "[regression] Language switcher block returns links to node on the frontpage": "https://www.drupal.org/files/issues/2023-05-16/3351458.patch"
+                "[regression] Language switcher block returns links to node on the frontpage": "https://www.drupal.org/files/issues/2023-05-16/3351458.patch",
+                "Can't translate config when source language does not exists": "https://www.drupal.org/files/issues/2023-02-06/3184569_14.patch"
             },
             "drupal/devel": {
                 "Brings back the Available Methods & Properties tabs for Kint dumps — Issue #221": "https://raw.githubusercontent.com/politsin/snipets/master/patch/kint.patch"

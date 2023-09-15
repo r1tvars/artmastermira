@@ -10,6 +10,8 @@ libraries:
   - artmastermira/language_switcher
   - artmastermira/scroll_to_content
   - artmastermira/mobile_header
+  - artmastermira/input_focus
+  - artmastermira/webform
 
 regions:
   site_branding: Site branding

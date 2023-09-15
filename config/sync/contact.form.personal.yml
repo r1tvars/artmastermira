@@ -9,5 +9,5 @@ label: 'Personīgā kontaktu forma'
 recipients: {  }
 reply: ''
 weight: 0
-message: 'Jūsu vēstule nosūtīta.'
+message: '<p>Jūsu vēstule nosūtīta.</p>'
 redirect: ''

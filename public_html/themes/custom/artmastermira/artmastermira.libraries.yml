@@ -34,3 +34,20 @@ mobile_header:
     - core/jquery
     - core/drupal
     - core/once
+    
+input_focus:
+  version: VERSION
+  js:
+    src/js/input_focus.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/once
+
+webform:
+  version: VERSION
+  js:
+    src/js/webform.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal

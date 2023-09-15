@@ -12,6 +12,9 @@ function custom_theme_suggestions_alter(array &$suggestions, array $variables, $
             $suggestions[] = $hook . '__heder_menu';
         }
     }
+    if($hook == 'status_messages'){
+        $variables['attributes']['class'][] = 'message-box';
+    }
 }
 
 /**
@@ -96,4 +99,14 @@ function custom_preprocess_field(&$variables){
     if (in_array($variables['field_type'], ['text_with_summary', 'text_long', 'string_long'])){
         $variables['attributes']['class'][] = 'cke_editable';
     }
+}
+
+
+/**
+ * Implements custom_preprocess_webform
+ */
+function custom_preprocess_webform(&$vars){
+    $wfid = $vars["element"]["#webform_id"];
+    $wf = \Drupal\webform\Entity\Webform::load($wfid);
+    $vars["title"] = $wf->label();
 }

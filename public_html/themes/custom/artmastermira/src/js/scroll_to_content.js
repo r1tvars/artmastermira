@@ -10,7 +10,7 @@
   
     function processingCallback() {
       $(document).ready(function (e) {
-        $('#scroll-to-content').on('click', function(){
+        $('.scroll-to-content').on('click', function(){
             var target = $(this).data('content-target');
             $('html, body').animate({
                 scrollTop: $(`#${target}`).offset().top

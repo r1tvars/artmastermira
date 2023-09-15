@@ -33,12 +33,12 @@
             <h2 class="font-ptsans text-4xl font-medium uppercase text-darkGray text-center">{{title}}</h2>
         </div>
         <div class="flex md:flex-row flex-col gap-[45px] pt-[40px]">
-            <div class="{% if image != 'default' %}basis-1/2{% endif %} about-block pt-3 flex flex-col">
+            <div class="{% if image != 'default' %}basis-1/2{% endif %} about-block pt-3 flex flex-col font-ptsans">
               {{body|raw}}
               <a class="text-darkGray font-medium mt-5" href="{{url}}">{{'Читать далее'|t}}</a>
             </div>
             {% if image != 'default' %}
-              <div class="basis-1/2 rounded-md overflow-hidden">
+              <div class="basis-1/2 rounded-md overflow-hidden shadow-lg">
                 <img src="{{image}}" alt="">
               </div>
             {% endif %}

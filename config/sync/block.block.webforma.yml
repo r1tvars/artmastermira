@@ -1,0 +1,26 @@
+uuid: df08972a-8005-46fa-933e-1974b56c6de6
+langcode: lv
+status: true
+dependencies:
+  config:
+    - webform.webform.contact
+  module:
+    - webform
+  theme:
+    - artmastermira
+id: webforma
+theme: artmastermira
+region: content
+weight: 0
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: Webforma
+  label_display: '0'
+  provider: webform
+  webform_id: contact
+  default_data: ''
+  redirect: false
+  lazy: false
+visibility: {  }

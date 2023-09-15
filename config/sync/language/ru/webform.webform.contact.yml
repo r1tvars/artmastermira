@@ -1,0 +1,20 @@
+description: '<p>Basic email contact webform.</p>'
+elements: |
+  name:
+    '#title': ' Имя'
+  email:
+    '#title': Email
+  message:
+    '#title': Сообщение
+  actions:
+    '#submit__label': Отправлять
+settings:
+  confirmation_message: '<p>Спасибо за ваше сообщение, мы рассмотрим его как можно скорее.</p>'
+handlers:
+  email_confirmation:
+    settings:
+      body: '<p>[webform_submission:values:message:value]</p>'
+  email_notification:
+    settings:
+      body: '<p>[webform_submission:values:message:value]</p>'
+title: 'Есть вопрос?'

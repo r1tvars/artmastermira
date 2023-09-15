@@ -1,0 +1,61 @@
+{#
+/**
+ * @file
+ * Theme implementation for a 'webform' element.
+ *
+ * This is an copy of the webform.html.twig theme_wrapper which includes the
+ * 'title_prefix' and 'title_suffix' variables needed for
+ * contextual links to appear.
+ *
+ * Available variables
+ * - attributes: A list of HTML attributes for the wrapper element.
+ * - children: The child elements of the webform.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @see template_preprocess_webform()
+ * @see _webform_form_after_build()
+ *
+ * @ingroup themeable
+ */
+#}
+<div class="flex bg-darkGray pt-8 px-5">
+    <div class="max-w-[995px] w-full m-auto mb-[50px]">
+    <div class="flex w-full justify-center">
+        <h2 class="font-ptsans text-4xl font-medium uppercase text-lotion text-center">{{title}}</h2>
+    </div>
+    <div class="flex md:flex-row flex-col md:gap-[45px] gap-[25px] pt-[40px]">
+        <div class="basis-1/2 flex flex-col bg-lighterGray rounded-md pt-7 px-6 pb-9 justify-center">
+            <form{{ attributes.addClass('artmaster-contact-form font-ptsans') }}>
+                {{ title_prefix }}
+                {{ children }}
+                {{ title_suffix }}
+            </form>
+        </div>
+        <div class="basis-1/2">
+            <div class="flex md:flex-row flex-col md:gap-[45px] gap-[25px] h-full">
+                <div class="basis-2/3 rounded-md overflow-hidden w-full relative">
+                    <img src="{{base_path ~ directory}}/dist/assets/header.jpg" class="h-full object-cover" alt="">
+                    <div class="absolute inset-0 bg-contact-block-image"></div>
+                </div>
+                <div class="shadow-inner basis-1/3 flex md:flex-col justify-center items-center gap-[45px] rounded-md w-full bg-lighterGray md:px-0 px-2.5 py-5">
+                    <a href="tel:+37128664047">
+                        <span class="flex contact-phone cursor-pointer w-14">
+                            {{source('themes/custom/artmastermira/dist/assets/phone.svg')}}
+                        </span>
+                    </a>
+                    <a href="mailto:artmaster.mira@gmail.com">
+                        <span class="flex contact-mail cursor-pointer w-14">
+                            {{source('themes/custom/artmastermira/dist/assets/envelope.svg')}}
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+</div>
+
