@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - filter.format.about_block_editor
+    - filter.format.basic_html
     - node.type.article
     - node.type.page
     - taxonomy.vocabulary.tags
@@ -46,6 +47,7 @@ permissions:
   - 'edit terms in tags'
   - 'revert all revisions'
   - 'use text format about_block_editor'
+  - 'use text format basic_html'
   - 'view all revisions'
   - 'view own unpublished content'
   - 'view the administration theme'

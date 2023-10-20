@@ -1,0 +1,51 @@
+uuid: 2710c067-d4c0-4432-9fb8-275d25703dbe
+langcode: lv
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.galerija.body
+    - field.field.node.galerija.field_bildes
+    - field.field.node.galerija.field_highlight
+    - field.field.node.galerija.field_paragraph
+    - node.type.galerija
+  module:
+    - text
+    - user
+id: node.galerija.teaser
+targetEntityType: node
+bundle: galerija
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_bildes:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_highlight:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_paragraph: true
+  langcode: true

@@ -1,0 +1,29 @@
+uuid: 0257b31a-541c-48a1-9ee9-eb038e7bfadc
+langcode: lv
+status: true
+dependencies:
+  config:
+    - views.view.gallerie_header
+  module:
+    - system
+    - views
+  theme:
+    - artmastermira
+id: views_block__gallerie_header_block_1
+theme: artmastermira
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:gallerie_header-block_1'
+settings:
+  id: 'views_block:gallerie_header-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /galleries

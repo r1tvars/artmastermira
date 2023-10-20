@@ -79,11 +79,10 @@
                     <h1 class="font-ptsans md:text-6xl text-4xl text-center mt-40">{{title}}</h1>
                 </div>
             </div>
-            {% if image == 'default' %}
-                {# <img class="h-[520px] object-cover w-full" src="{{base_path}}themes/custom/artmastermira/dist/assets/header.jpg" alt=""> #}
-                <img class="h-[520px] object-cover w-full" src="{{base_url}}/themes/custom/artmastermira/dist/assets/header.jpg" alt="">
+            {% if highlight_image %}
+                <img class="h-[520px] object-cover w-full" src="{{highlight_image}}" alt="">
             {% else %}
-                <img class="h-[520px] object-cover w-full" src="{{image}}" alt="">
+                <img class="h-[520px] object-cover w-full" src="{{base_url}}/themes/custom/artmastermira/dist/assets/header.jpg" alt="">
             {% endif %}
         </div>
         <div class="flex w-full absolute bottom-0 rotate-180">
@@ -97,8 +96,14 @@
         </div>
     </div>
     <div class="node-article-content flex justify-center md:px-3 px-5">
-        <div class="w-full max-w-[1170px] mb-[50px]">
+        <div class="w-full max-w-[1170px] pt-5 mb-[50px]">
             {{content['body']}}
+            <div id="art-gallery" class="pb-5">
+                {% for image in images %}
+                    <a href="{{image}}" data-ngthumb="{{image}}"></a>
+                {% endfor %}
+            </div>
+            {{content.field_paragraph}}
         </div>
     </div>
 </article>

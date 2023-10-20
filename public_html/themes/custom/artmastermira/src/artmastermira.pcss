@@ -11,10 +11,6 @@
 }
 
 @layer components {
-  .block,
-  .node {
-    @apply mb-4
-  }
 
   .node__content p,
   .node__content ul,
@@ -25,7 +21,7 @@
   [id$="-local-tasks"] ul {
     @apply list-disc list-inside
   }
-  .about-block h2{
+  .about-block h2, .gallery-block h2{
     @apply text-[30px] font-light
   }
   .about-block h2, .about-block h3, .about-block h4, .about-block h5, .about-block h6{
@@ -82,8 +78,11 @@
   .artmaster-contact-form .webform-actions input{
     @apply w-[175px] border-0 rounded-[37px] bg-oldGold p-0 flex justify-center font-ptsans text-h4 text-darkGray cursor-pointer shadow-md
   }
+  
 }
-
+.fixed-header{
+  width: -webkit-fill-available;
+}
 .webform-confirmation{
   font-size: 1.75rem;
   line-height: 2.25rem;
@@ -127,6 +126,28 @@
 .cke_editable img {
   @apply rounded-md mb-3.5
 }
+.cke_editable ol {
+  @apply list-decimal pl-4 mb-3.5 list-inside
+}
+.cke_editable ul {
+  @apply list-disc pl-4 mb-3.5 list-inside
+}
+.cke_editable blockquote{
+  @apply p-4 my-4 border-l-4 border-darkGray bg-gray-50
+}
+.cke_editable blockquote p{
+  @apply text-xl italic font-medium leading-relaxed text-darkGray
+}
+.cke_editable ol {
+  counter-reset: item;
+}
+.cke_editable ol li {
+  display: block;
+}
+.cke_editable ol li:before {
+  content: counters(item, ".") ". ";
+  counter-increment: item
+}
 body{
   overflow-x: hidden;
 }
@@ -147,6 +168,9 @@ body{
 }
 .site-logo svg{
   height: auto;
+}
+.footer-logo path{
+  fill: #111826;
 }
 .language svg path{
   fill: #fff;

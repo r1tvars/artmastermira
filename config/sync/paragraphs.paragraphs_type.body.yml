@@ -1,0 +1,10 @@
+uuid: 5d1a3e6b-639d-4121-83a5-b4f587e1acee
+langcode: lv
+status: true
+dependencies: {  }
+id: body
+label: Body
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

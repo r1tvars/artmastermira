@@ -45,18 +45,20 @@
  * @ingroup themeable
  */
 #}
+{% set base_url = url('<front>')|render|split('/', -1)|join('/') %}
+
 <div class="relative content-home">
 
   <header role="banner">
     <div class="flex flex-col relative">
-      <div class="flex w-full z-10 absolute">
+      <div class="flex w-full z-10 absolute fixed-header">
         <div class="flex lg:basis-2/5 basis-1/5 h-[50px] bg-darkGray justify-center">
           <div class="flex items-center relative md:hidden">
             <div class="relative">
               <span class="flex language cursor-pointer w-6">
                 {{source('themes/custom/artmastermira/dist/assets/globe.svg')}}
               </span>
-              <div class="language-block flex bg-white shadow-popover rounded-md p-2 absolute z-10 top-8 left-1/2 -translate-x-1/2 hidden">
+              <div class="language-block flex bg-white shadow-popover rounded-md p-2 absolute z-10 top-8 md:left-1/2 left-full -translate-x-1/2 hidden">
                 {{ page.header_content }}
               </div>
             </div>
@@ -85,10 +87,10 @@
               {{ page.site_branding }}
             </div>
             <div class="md:flex ml-auto gap-[40px] hidden">
-              <div class="header-menu flex gap-[40px] items-center text-white font-ptsans font-medium text-3xl">
+              <div class="header-menu flex md:flex-row flex-col md:gap-[40px] gap-5 items-center text-white font-ptsans font-medium text-3xl">
                 {{ page.header_menu }}
-                <div class="scroll-to-content flex h-[52px] rounded-[37px] md:justify-normal justify-center shadow-xl" data-content-target="block-webforma">
-                  <span class="w-[175px] border-0 rounded-[37px] bg-oldGold p-0 flex justify-center font-ptsans text-h4 text-darkGray cursor-pointer items-center">{{'Связаться'|t}}</span>
+                <div class="scroll-to-content scroll-to-about-mobile flex h-[52px] rounded-[37px] md:justify-normal justify-center shadow-xl" data-content-target="block-webforma">
+                  <span class="w-[175px] border-0 rounded-[37px] md:bg-oldGold bg-darkGray p-0 flex justify-center font-ptsans text-h4 md:text-darkGray text-lotion cursor-pointer items-center">{{'Связаться'|t}}</span>
                 </div>
               </div>
               <div class="flex items-center relative">
@@ -117,10 +119,58 @@
     </div>
   </main>
 
-  {% if page.footer %}
-    <footer role="contentinfo">
-      {{ page.footer }}
-    </footer>
-  {% endif %}
+  <footer role="contentinfo" class="bg-gray-100">
+    <div class="relative mx-auto max-w-[1170px] px-4 py-16 sm:px-6 lg:px-8 lg:pt-24">
+      <div class="absolute end-4 top-4 sm:end-6 sm:top-6 lg:end-8 lg:top-8">
+        <a
+          class="scroll-to-top inline-block rounded-full bg-darkGray p-2 text-gray-200 ring-indigo-300 transition duration-100 hover:bg-oldGold hover:text-darkGray focus-visible:ring active:bg-gray-200 sm:p-3 lg:p-4 cursor-pointer"
+        >
+          <span class="sr-only">Back to top</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-5 w-5"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M14.707 12.707a1 1 0 01-1.414 0L10 9.414l-3.293 3.293a1 1 0 01-1.414-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 010 1.414z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </a>
+      </div>
+
+      <div class="lg:flex lg:items-end lg:justify-between">
+        <div>
+          <div class="flex justify-centerlg:justify-start max-w-[100px] m-auto md:m-0 footer-logo">
+            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="87.1503mm" height="87.1503mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+              viewBox="0 0 5020 5020"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              class="h-auto">
+              <g id="Layer_x0020_1">
+                <metadata id="CorelCorpID_0Corel-Layer"/>
+                <g id="_1052088368">
+                <path class="fil0" d="M2788 4004c1,23 104,97 117,110l268 243c8,9 23,27 24,33 7,31 -26,48 -44,61 -21,15 -45,32 -79,36 -56,6 -156,15 -206,-13 -29,-16 -39,-20 -57,-54 -38,-75 -32,-108 -30,-196 2,-74 0,-149 7,-220zm-278 672c-598,0 -1140,-242 -1532,-634 -392,-392 -635,-934 -635,-1532 0,-598 243,-1140 635,-1532 392,-392 934,-635 1532,-635 598,0 1140,243 1532,635 392,392 634,934 634,1532 0,598 -242,1140 -634,1532 -392,392 -934,634 -1532,634zm2036 -2657c-31,-126 -72,-248 -125,-364l-39 -83c-101,-201 -234,-385 -392,-543 -26,-26 -53,-52 -81,-77 -16,-8 -27,-13 -45,-26 -29,-20 -56,-60 -92,-47 -223,87 -417,181 -674,222 -87,14 -174,35 -260,45 -1,31 40,124 53,160 41,111 60,203 109,325l116 318c17,59 33,106 54,164 44,115 70,219 90,345l23 189c1,59 2,157 -4,214 -4,30 -10,58 -17,88 -27,117 -15,123 -70,258 -23,55 -39,94 -69,148 -59,102 -32,80 -121,203 -14,20 -27,43 -45,66 -17,23 -31,39 -46,59 -18,24 -38,34 -54,58 9,16 42,44 56,56 9,8 18,17 27,26 37,37 8,14 58,53 11,9 22,17 31,27 30,31 191,157 245,199 21,17 40,35 62,53 79,63 208,153 283,25 32,-54 4,-125 -3,-189 -5,-45 -9,-106 -21,-148 -5,-20 2,-23 -4,-43 -24,6 -24,19 -42,30l-45 27c-42,29 -164,86 -222,59 -32,-14 -54,-64 -45,-99 9,-35 31,-67 56,-89 82,-72 136,-94 215,-156 19,-14 4,-3 27,-13 10,-5 12,-7 20,-15 8,-18 -31,-253 -36,-304 -16,-167 -37,-349 -64,-512 -21,-126 -38,-264 -52,-405 -6,-56 -60,-378 -40,-401 7,-9 25,-15 40,-16 37,-2 63,44 95,82l100 130c108,155 231,313 337,465l155 215c6,7 8,10 13,16 10,14 16,23 24,34 9,12 39,59 52,65 26,-26 83,-141 96,-185 6,-21 31,-76 44,-96 26,-39 16,-69 74,-49 3,42 -75,242 -45,340 14,48 28,24 -4,67 -27,36 -21,19 -55,76 14,28 46,54 69,82 21,26 49,67 94,32 74,-58 102,-247 114,-336 6,-37 7,-106 14,-136 5,-25 12,-27 9,-61 -3,-44 4,-24 7,-59 8,-86 -8,-350 -24,-420 -11,-51 -18,-100 -26,-149zm-3500 -1006l-16 16c-55,55 -106,112 -154,172l0 0 0 0c-213,265 -362,583 -426,931 3,4 8,9 14,14 55,45 61,56 120,11 23,-17 34,-25 54,-42l1158 -945c33,-30 72,-55 104,-86l-389 -149c-34,-14 -45,-23 -72,-38 -45,-26 -57,-18 -112,-52 -64,-40 -62,-3 -172,79l-109 89zm3096 2443c56,73 107,148 62,247 -23,52 -66,97 -97,135 -63,76 -43,47 -83,90 -14,14 -13,14 -37,21 -86,24 -83,-63 -94,-133 -40,-246 -53,-174 21,-253 21,-22 41,-39 58,-58 35,-41 54,-41 102,-101 4,-6 10,-11 14,-14l54 66zm-342 -474l116 159c4,7 4,7 10,15 4,6 8,9 10,14 30,46 -122,166 -129,168 -6,-37 -9,-68 -16,-106 -12,-67 -60,-267 -36,-300 16,4 12,10 22,25 7,9 15,17 23,25zm-990 -142c1,-127 6,-254 7,-381l4 -290c0,-50 -3,-43 22,-70 46,18 59,48 94,107 84,142 66,194 96,309 43,163 20,376 -36,536 -21,62 -98,201 -163,240 -20,-6 -25,-9 -27,-32 -4,-38 6,-119 5,-178 -3,-79 -2,-162 -2,-241zm-2065 -113c8,-24 13,-22 25,-41 9,-13 19,-25 28,-35 19,-22 34,-49 63,-67 3,-18 183,-240 218,-284 7,-9 11,-11 18,-20l243 -298c29,-38 53,-84 83,-66 33,21 -39,160 -54,225l-173 431c-148,308 78,277 232,131 53,-50 78,-61 122,-100 53,-46 101,-75 131,-101l99 -89c55,-44 72,-70 112,-50 6,49 -10,71 -27,106l-124 276c-53,124 -113,240 -166,365 -24,57 -55,125 -85,181 -30,58 -52,123 -82,183 -45,87 -79,178 -128,272 -40,77 -83,185 -216,178 -136,-7 -204,-162 -272,-258 -24,-32 -32,-58 -50,-85 -46,-67 -62,-97 -89,-177 -42,-127 -89,-140 -70,-313 9,-88 64,-211 114,-286 9,-13 18,-27 26,-42 5,-9 17,-32 22,-36zm690 -297c7,-39 174,-419 194,-468 74,-178 145,-363 231,-535l18 -41c7,-13 7,-9 15,-28 19,-43 11,-48 34,-87 91,-157 38,-188 148,-157 34,9 102,20 141,24 149,14 292,17 446,26 16,38 -147,2518 -165,2915 -3,61 -10,119 -14,178 -4,49 1,144 -14,181 -17,40 -102,54 -143,24 -42,-31 -48,-76 -47,-147 1,-33 6,-60 7,-91l16 -271c4,-108 22,-233 29,-347l19 -265c0,-103 26,-297 28,-434 0,-29 21,-151 15,-164 -9,-23 -44,-43 -74,-118 -20,-51 -31,-95 -33,-162 -1,-57 5,-142 -31,-156 -19,9 -20,11 -24,36l-52 332c-12,66 -25,128 -34,189l-32 192c-47,251 -73,515 -128,757 -28,123 -40,256 -69,375 -14,57 -36,105 -92,130 -53,24 -122,1 -168,-31 -33,-24 -28,-31 -43,-67 -46,-106 -26,-207 13,-312l67 -207c3,-16 7,-29 13,-41 20,-37 28,-85 39,-124 4,-15 16,-32 31,-81l73 -235c1,-4 5,-15 7,-18l83 -250c5,-16 5,-28 13,-44l30 -79c6,-27 -1,-18 11,-45 21,-49 37,-112 55,-165 9,-24 23,-48 33,-80 6,-22 7,-22 15,-41l61 -210c27,-81 110,-277 45,-340 -50,-49 -119,-6 -162,21 -12,8 -25,12 -37,20 -13,8 -16,15 -29,25 -78,60 -109,81 -182,151l-176 156c-19,17 -40,32 -61,51 -20,18 -36,29 -59,51 -9,10 -15,21 -29,23 -18,3 -17,-6 -32,-16zm1959 -1645c8,4 6,0 14,9 -9,15 -28,22 -46,26l-93 39c-27,12 -65,17 -97,33 -133,64 -552,99 -703,82 -212,-24 -240,-35 -439,-84 -149,-37 -147,-50 -247,-86 -29,-10 -71,-16 -125,-40 -23,-10 -10,0 -15,-13 11,-16 157,-77 187,-87 66,-23 145,-41 214,-56 34,-8 81,-14 117,-18 281,-25 575,-28 843,48 37,10 76,16 110,26l151 52c16,6 33,12 47,20 28,14 59,29 82,49z"/>
+                <path class="fil0" d="M2510 5020c-1386,0 -2510,-1124 -2510,-2510 0,-1386 1124,-2510 2510,-2510 1386,0 2510,1124 2510,2510 0,1386 -1124,2510 -2510,2510zm0 -177c-1289,0 -2333,-1044 -2333,-2333 0,-1289 1044,-2333 2333,-2333 1289,0 2333,1044 2333,2333 0,1289 -1044,2333 -2333,2333z"/>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <p
+            class="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500 lg:text-left"
+          >
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
+            consequuntur amet culpa cum itaque neque.
+          </p>
+        </div>
+        {{page.footer}}
+      </div>
+
+      <p class="mt-12 text-center text-sm text-gray-500 lg:text-right">
+        © 2023. ArtMasterMira. {{'Все права защищены.'|t}}
+      </p>
+    </div>
+  </footer>
 
 </div>{# /.layout-container #}

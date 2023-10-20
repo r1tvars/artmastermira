@@ -1,0 +1,8 @@
+uuid: e8267b26-29cf-4e9f-b7aa-7c1e22139927
+langcode: ru
+status: true
+dependencies: {  }
+id: footer-ru
+label: 'Footer menu ru'
+description: ''
+locked: false

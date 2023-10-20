@@ -1,6 +1,7 @@
 <?php
 
 use Drupal\image\Entity\ImageStyle;
+use Drupal\Core\Url;
 
 /**
  * Implements hook_theme_suggestions_alter().
@@ -8,12 +9,19 @@ use Drupal\image\Entity\ImageStyle;
 function custom_theme_suggestions_alter(array &$suggestions, array $variables, $hook) {
     if($hook == 'menu'){
         $menus = ['main-lv', 'main-ru'];
+        $footer_menus = ['footer-lv', 'footer-ru'];
         if(in_array($variables['menu_name'], $menus)){
             $suggestions[] = $hook . '__heder_menu';
+        }
+        if(in_array($variables['menu_name'], $footer_menus)){
+            $suggestions[] = $hook . '__footer_menu';
         }
     }
     if($hook == 'status_messages'){
         $variables['attributes']['class'][] = 'message-box';
+    }
+    if($hook == 'views_view_unformatted'){
+        $suggestions[] = $hook . '__gallery_grid';
     }
 }
 
@@ -22,6 +30,8 @@ function custom_theme_suggestions_alter(array &$suggestions, array $variables, $
  */
 function custom_preprocess_block(&$variables) {
     $language = \Drupal::languageManager()->getCurrentLanguage()->getId();
+    $galleries = [];
+
     if($variables['plugin_id'] == 'views_block:first_page_header-block_1'){
         $config = \Drupal::config('system.site');
         $variables['site_name'] = $config->get('name');
@@ -45,6 +55,27 @@ function custom_preprocess_block(&$variables) {
             $variables['url'] = $node->toUrl()->toString();
         }
     }
+    if($variables['plugin_id'] == 'views_block:galleries-block_1'){
+        foreach ($variables['content']['#view']->result as $row) {
+            $node = $row->_entity;
+            if ($node->hasTranslation($language)){
+                $node = $node->getTranslation($language);
+            }
+            $highlight_image = $node->field_highlight->entity;
+            if(isset($highlight_image)){
+                $highlight = getMediaImage($highlight_image, 'fullhd');
+            } else {
+                $highlight = getMediaImage($node->field_bildes->entity, 'fullhd');
+            }
+            $galleries[] = [
+                'title' => $node->label() ?? '',
+                'image' => $highlight,
+                'url' => $node->toUrl()->toString()
+            ];
+        }
+        $variables['galleries_url'] = Url::fromRoute('view.galleries.page_1')->toString();
+    }
+    $variables['galleries'] = $galleries;
 
 }
 
@@ -72,13 +103,36 @@ function custom_preprocess_node(&$variables){
     if ($node->getType() == 'par_mums') {
         $media = $node->field_open_page_image->entity;
         if(isset($media)){
-            $image = getMediaImage($node->field_open_page_image->entity, 'fullhd');
+            $image = getMediaImage($media, 'fullhd');
         }else{
             $image = 'default';
         }
         $variables['title'] = $node->label() ?? '';
         $variables['body'] = $node->body->value ?? '';
         $variables['image'] = $image;
+        $variables['url'] = $node->toUrl()->toString();
+    } else if ($node->getType() == 'galerija' && $variables['view_mode'] == 'full') {
+        foreach ($node->field_bildes->getIterator() as $value) {
+            $media = $value->entity;
+            if(isset($media)){
+                $images[] = getMediaImage($media, 'fullhd');
+            }
+        }
+        $highlight_image = $node->field_highlight->entity;
+        if(isset($highlight_image)){
+            $variables['highlight_image'] = getMediaImage($highlight_image, 'fullhd');
+        }
+        $variables['title'] = $node->label() ?? '';
+        $variables['body'] = $node->body->value ?? '';
+        $variables['images'] = $images;
+    } else if ($node->getType() == 'galerija' && $variables['view_mode'] == 'teaser') {
+        $highlight_image = $node->field_highlight->entity;
+        if(isset($highlight_image)){
+            $variables['highlight_image'] = getMediaImage($highlight_image, 'fullhd');
+        } else {
+            $variables['highlight_image'] = getMediaImage($node->field_bildes->entity, 'fullhd');
+        }
+        $variables['title'] = $node->label() ?? '';
         $variables['url'] = $node->toUrl()->toString();
     }
 }

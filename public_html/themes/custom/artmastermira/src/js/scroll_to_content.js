@@ -11,10 +11,16 @@
     function processingCallback() {
       $(document).ready(function (e) {
         $('.scroll-to-content').on('click', function(){
-            var target = $(this).data('content-target');
-            $('html, body').animate({
-                scrollTop: $(`#${target}`).offset().top
-            }, 800)
+          var target = $(this).data('content-target');
+          $('html, body').animate({
+            scrollTop: $(`#${target}`).offset().top
+          }, 800);
+        });
+        $('.scroll-to-top').on('click', function(e){
+          e.preventDefault();
+          $('html, body').animate({
+            scrollTop: "0",
+          }, 800);
         });
       });
     }

@@ -1,0 +1,8 @@
+uuid: 6c8d9742-c9f8-4879-ac97-e9170182cdde
+langcode: lv
+status: true
+dependencies: {  }
+id: footer-lv
+label: 'Footer menu lv'
+description: ''
+locked: false

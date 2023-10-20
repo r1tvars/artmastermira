@@ -12,6 +12,10 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
         }
     ],
     "require": {
@@ -32,7 +36,11 @@
         "drupal/pathauto": "^1.11",
         "drupal/redirect_after_login": "^3.0@dev",
         "drupal/webform": "^6.2@beta",
-        "kint-php/kint": "^5.0"
+        "kint-php/kint": "^5.0",
+        "npm-asset/nanogallery2": "^3.0",
+        "npm-asset/slick-carousel": "^1.8",
+        "npm-asset/swiper": "^10.3",
+        "oomphinc/composer-installers-extender": "^2.0"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -47,7 +55,8 @@
             "phpstan/extension-installer": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "cweagans/composer-patches": true,
-            "php-http/discovery": true
+            "php-http/discovery": true,
+            "oomphinc/composer-installers-extender": true
         },
         "sort-packages": true
     },
@@ -57,12 +66,18 @@
                 "web-root": "public_html/"
             }
         },
+        "installer-types": [
+            "npm-asset",
+            "bower-asset"
+        ],
         "installer-paths": {
             "public_html/core": [
                 "type:drupal-core"
             ],
             "public_html/libraries/{$name}": [
-                "type:drupal-library"
+                "type:drupal-library",
+                "type:npm-asset",
+                "type:bower-asset"
             ],
             "public_html/modules/contrib/{$name}": [
                 "type:drupal-module"
@@ -111,7 +126,8 @@
         "patches": {
             "drupal/core": {
                 "[regression] Language switcher block returns links to node on the frontpage": "https://www.drupal.org/files/issues/2023-05-16/3351458.patch",
-                "Can't translate config when source language does not exists": "https://www.drupal.org/files/issues/2023-02-06/3184569_14.patch"
+                "Can't translate config when source language does not exists": "https://www.drupal.org/files/issues/2023-02-06/3184569_14.patch",
+                "Set filename as a default value to image 'Alt' & 'Title' field": "https://www.drupal.org/files/issues/2023-01-09/3203489-15.patch"
             },
             "drupal/devel": {
                 "Brings back the Available Methods & Properties tabs for Kint dumps — Issue #221": "https://raw.githubusercontent.com/politsin/snipets/master/patch/kint.patch"

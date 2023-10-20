@@ -71,34 +71,10 @@
  */
 #}
 {% set base_url = url('<front>')|render|split('/', -1)|join('/') %}
-<article{{ attributes.addClass('node bg-grayBase') }}>
-    <div class="relative">
-        <div class="h-[520px] overflow-hidden">
-            <div class="absolute inset-0 bg-header-linear-gradient flex flex-col justify-center items-center">
-                <div class="flex flex-col max-w-[1170px] w-full gap-5 text-white">
-                    <h1 class="font-ptsans md:text-6xl text-4xl text-center mt-40">{{title}}</h1>
-                </div>
-            </div>
-            {% if image == 'default' %}
-                {# <img class="h-[520px] object-cover w-full" src="{{base_path}}themes/custom/artmastermira/dist/assets/header.jpg" alt=""> #}
-                <img class="h-[520px] object-cover w-full" src="{{base_url}}/themes/custom/artmastermira/dist/assets/header.jpg" alt="">
-            {% else %}
-                <img class="h-[520px] object-cover w-full" src="{{image}}" alt="">
-            {% endif %}
-        </div>
-        <div class="flex w-full absolute bottom-0 rotate-180">
-            <div class="flex lg:basis-2/5 basis-1/5 h-[50px] bg-grayBase"></div>
-            <div class="flex flex-1 relative overflow-hidden">
-                <div class="flex w-[40px] bg-grayBase absolute inset-0 top-left-cut left-[-2px] pt-[52px]"></div>
-                <div class="flex h-1/2 w-full bg-lotion shadow-xl"></div>
-                <div class="flex w-[40px] bg-grayBase absolute inset-0 ml-auto top-right-cut right-[-2px] pt-[52px]"></div>
-            </div>
-            <div class="flex lg:basis-2/5 basis-1/5 h-[50px] bg-grayBase ml-auto"></div>
-        </div>
+<a href="{{url}}">
+    <img src="{{highlight_image}}" loading="lazy" alt="Photo by Minh Pham" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+    <div
+        class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
     </div>
-    <div class="node-article-content flex justify-center md:px-3 px-5">
-        <div class="w-full max-w-[1170px] mb-[50px]">
-            {{content['body']}}
-        </div>
-    </div>
-</article>
+    <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">{{title}}</span>
+</a>

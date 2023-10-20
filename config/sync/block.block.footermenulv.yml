@@ -1,0 +1,33 @@
+uuid: c714dbdd-97a0-4d62-b75c-5505e8a91e74
+langcode: lv
+status: true
+dependencies:
+  config:
+    - system.menu.footer-lv
+  module:
+    - language
+    - system
+  theme:
+    - artmastermira
+id: footermenulv
+theme: artmastermira
+region: footer
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer-lv'
+settings:
+  id: 'system_menu_block:footer-lv'
+  label: 'Footer menu lv'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  language:
+    id: language
+    negate: false
+    context_mapping:
+      language: '@language.current_language_context:language_interface'
+    langcodes:
+      lv: lv

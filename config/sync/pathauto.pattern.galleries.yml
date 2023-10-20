@@ -1,0 +1,34 @@
+uuid: 39219063-1662-4cb5-ad49-00cc18a794ec
+langcode: lv
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: galleries
+label: Galleries
+type: 'canonical_entities:node'
+pattern: 'gallery/[node:title]'
+selection_criteria:
+  83151c54-8d30-456d-8f25-4c7176b91535:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 83151c54-8d30-456d-8f25-4c7176b91535
+    context_mapping:
+      node: node
+    bundles:
+      galerija: galerija
+  04fd929c-cf46-48bf-a683-5813f5a002ee:
+    id: language
+    negate: false
+    uuid: 04fd929c-cf46-48bf-a683-5813f5a002ee
+    context_mapping:
+      language: 'node:langcode:language'
+    langcodes:
+      ru: ru
+      lv: lv
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Valoda

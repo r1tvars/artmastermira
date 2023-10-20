@@ -1,0 +1,29 @@
+uuid: 32d9262d-3052-4df6-a14d-337f5ad0c17a
+langcode: lv
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bildes
+    - media.type.image
+    - node.type.galerija
+id: node.galerija.field_bildes
+field_name: field_bildes
+entity_type: node
+bundle: galerija
+label: Bildes
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

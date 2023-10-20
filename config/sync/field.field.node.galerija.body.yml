@@ -1,0 +1,23 @@
+uuid: 9bc369c7-2e7b-47bf-af56-f32e0ac85290
+langcode: lv
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.galerija
+  module:
+    - text
+id: node.galerija.body
+field_name: body
+entity_type: node
+bundle: galerija
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

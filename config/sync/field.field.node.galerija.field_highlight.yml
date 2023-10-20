@@ -1,0 +1,29 @@
+uuid: b950b563-5c25-4b33-8b50-f9ae534d41f5
+langcode: lv
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_highlight
+    - media.type.image
+    - node.type.galerija
+id: node.galerija.field_highlight
+field_name: field_highlight
+entity_type: node
+bundle: galerija
+label: 'Izceltā bilde'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

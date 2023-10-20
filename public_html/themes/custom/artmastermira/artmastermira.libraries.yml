@@ -3,6 +3,23 @@ global-styling:
     base:
       dist/artmastermira.css: {}
 
+nanogallery2:
+  version: ^3.5.7
+  js:
+    /libraries/nanogallery2/dist/jquery.nanogallery2.min.js: { minified: true }
+  css:
+    component:
+      /libraries/nanogallery2/dist/css/nanogallery2.min.css: { minified: true }
+      
+slick-slider:
+  version: VERSION
+  js:
+    /libraries/slick-carousel/slick/slick.js: {}
+  css:
+    theme:
+      /libraries/slick-carousel/slick/slick.css: {}
+      /libraries/slick-carousel/slick/slick-theme.css: {}
+
 fontawesome: 
   version: VERSION
   js:
@@ -51,3 +68,32 @@ webform:
   dependencies:
     - core/jquery
     - core/drupal
+
+gallery_init:
+  version: VERSION
+  js:
+    src/js/gallery_init.js: {}
+  dependencies:
+    - core/jquery
+    - artmastermira/nanogallery2
+    - core/drupal
+    - core/once
+
+fixed_header:
+  version: VERSION
+  js:
+    src/js/fixed_header.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/once
+
+gallery_swiper:
+  version: VERSION
+  js:
+    src/js/gallery_swiper.js: {}
+  dependencies:
+    - core/jquery
+    - artmastermira/slick-slider
+    - core/drupal
+    - core/once

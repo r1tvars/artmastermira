@@ -1,0 +1,18 @@
+uuid: 86186ae2-bc45-44bd-9473-016329a8fd15
+langcode: lv
+status: true
+dependencies:
+  config:
+    - node.type.galerija
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+    bundle_settings:
+      untranslatable_fields_hide: '0'
+id: node.galerija
+target_entity_type_id: node
+target_bundle: galerija
+default_langcode: site_default
+language_alterable: true

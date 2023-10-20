@@ -1,0 +1,71 @@
+{#
+/**
+ * @file
+ * Theme override to display a block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - in_preview: Whether the plugin is being rendered in preview mode.
+ * - content: The content of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @see template_preprocess_block()
+ */
+#}
+{% set layout = [2, 3, 6, 7, 10, 11, 14, 15, 18, 19, 22, 23, 26, 27, 30, 31, 34, 35, 38, 39, 42, 43, 46, 47, 50, 51, 54, 55, 58, 59, 62, 63, 66, 67, 70, 71, 74, 75, 78, 79, 82, 83] %}
+{% set count = 1 %}
+<div class="pt-8 px-5 bg-grayBase">
+  <div class="gallery-block relative">
+    <div class="absolute h-full w-full bg-[radial-gradient(#c9cbcd_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
+    <div class="mx-auto max-w-[1170px] pb-[50px] relative">
+      <div class="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">
+        <div class="flex items-center gap-12">
+            <h2><b>Gallery</b></h2>
+            <p class="hidden max-w-screen-sm md:flex">
+                This is a section of some simple filler text,
+                also known as placeholder text. It shares some characteristics of a real written text.
+            </p>
+        </div>
+
+        <a href="{{galleries_url}}"
+            class="inline-block rounded-lg border bg-darkGray dark:border-none px-4 py-2 text-center text-sm font-semibold text-gray-200 outline-none ring-indigo-300 transition duration-100 hover:bg-oldGold hover:text-darkGray focus-visible:ring active:bg-gray-200 md:px-8 md:py-3 md:text-base">
+            {{'Более'|t}}
+        </a>
+      </div>
+      <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
+          {% for gallerie in galleries %}
+            {% if count in layout %}
+              <div class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:col-span-2 md:h-80">
+            {% else %}
+              <div class="group relative flex h-48 items-end overflow-hidden rounded-lg bg-gray-100 shadow-lg md:h-80">
+            {% endif %}
+              <a href="{{gallerie.url}}">
+                <img src="{{gallerie.image}}" loading="lazy" alt="Photo by Minh Pham" class="absolute inset-0 h-full w-full object-cover object-center transition duration-200 group-hover:scale-110" />
+                <div
+                    class="pointer-events-none absolute inset-0 bg-gradient-to-t from-gray-800 via-transparent to-transparent opacity-50">
+                </div>
+                <span class="relative ml-4 mb-3 inline-block text-sm text-white md:ml-5 md:text-lg">{{gallerie.title}}</span>
+              </a>
+            </div>
+            {% set count = count + 1 %}
+          {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
