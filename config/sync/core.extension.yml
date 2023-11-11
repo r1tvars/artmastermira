@@ -49,7 +49,6 @@ module:
   redirect_after_login: 0
   search: 0
   shortcut: 0
-  smtp: 0
   system: 0
   taxonomy: 0
   text: 0
