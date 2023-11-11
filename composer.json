@@ -35,7 +35,6 @@
         "drupal/paragraphs_asymmetric_translation_widgets": "^1.2",
         "drupal/pathauto": "^1.11",
         "drupal/redirect_after_login": "^3.0@dev",
-        "drupal/smtp": "^1.2",
         "drupal/webform": "^6.2@beta",
         "kint-php/kint": "^5.0",
         "npm-asset/nanogallery2": "^3.0",
