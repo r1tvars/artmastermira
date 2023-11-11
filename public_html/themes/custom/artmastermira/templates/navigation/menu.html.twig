@@ -35,11 +35,12 @@
       <ul>
     {% endif %}
     {% for item in items %}
-      <li{{ item.attributes }}>
+      <li{{ item.attributes.addClass('relative group') }}>
         {{ link(item.title, item.url) }}
         {% if item.below %}
           {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
         {% endif %}
+        <span class="md:bg-oldGold bg-darkGray w-2/3 h-1 absolute left-0 right-0 m-auto md:mt-2 hidden group-hover:block"></span>
       </li>
     {% endfor %}
     </ul>

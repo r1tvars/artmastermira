@@ -10,6 +10,10 @@
   
     function processingCallback() {
       $(document).ready(function () {
+        console.log($('.group .is-active'));
+        if($('.group .is-active').length){
+          $('.group .is-active').next().removeClass('hidden group-hover:block').addClass('block');
+        }
         var distance = $('.fixed-header').offset().top; 
         $(window).scroll(function () {
             if ($(window).scrollTop() >= distance) {
