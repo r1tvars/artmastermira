@@ -127,7 +127,7 @@ form:
 element:
   machine_name_pattern: a-z0-9_
   empty_message: '{Empty}'
-  allowed_tags: admin
+  allowed_tags: html
   wrapper_classes: |
     container-inline clearfix
     form--inline clearfix
@@ -161,14 +161,14 @@ element:
     password_confirm: password_confirm
 html_editor:
   disabled: false
-  element_format: webform_default
-  mail_format: webform_default
+  element_format: basic_html
+  mail_format: basic_html
   tidy: true
   make_unused_managed_files_temporary: true
 file:
   file_public: false
   file_private_redirect: true
-  file_private_redirect_message: 'Please login to access the uploaded file.'
+  file_private_redirect_message: '<p>Please login to access the uploaded file.</p>'
   default_max_filesize: ''
   default_managed_file_extensions: 'gif jpg jpeg png bmp eps tif pict psd txt rtf html odf pdf doc docx ppt pptx xls xlsx xml avi mov mp3 mp4 ogg wav bz2 dmg gz jar rar sit svg tar zip'
   default_image_file_extensions: 'gif jpg jpeg png'
