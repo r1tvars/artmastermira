@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @tailwind base;
 @tailwind components;
+@font-face {
+  font-family: 'Ardeco';
+  src: local('Ardeco'), url(./fonts/Ardeco.ttf) format('ttf');
+}
 @tailwind utilities;
 
 @layer base {
@@ -77,7 +81,7 @@
     @apply flex h-[52px] border-0 rounded-[37px] md:justify-normal justify-center mt-3
   }
   .artmaster-contact-form .webform-actions input{
-    @apply w-[175px] border-0 rounded-[37px] bg-oldGold md:hover:bg-darkGray md:hover:text-lotion p-0 flex justify-center font-ptsans text-h4 text-darkGray cursor-pointer shadow-md
+    @apply w-[175px] border-0 rounded-[37px] bg-oldGold md:hover:bg-darkGray md:hover:text-lotion p-0 flex justify-center font-ardeco text-h4 text-darkGray cursor-pointer shadow-md
   }
   
 }
@@ -197,4 +201,22 @@ body{
   0% { opacity: 0; }
   10% { transform: translateY(0); opacity: 1; }
   100% { transform: translateY(15px); opacity: 0;}
+}
+.hero-image{
+  transition: transform 0.5s ease-in-out;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(1); /* Initial scale */
+  }
+  to {
+    transform: scale(1.1); /* Final scale */
+  }
+}
+.zoom-in {
+  animation: zoomIn 60s forwards; /* Set the animation name and duration */
+}
+.bg-header-linear-gradient{
+  z-index: 2;
 }

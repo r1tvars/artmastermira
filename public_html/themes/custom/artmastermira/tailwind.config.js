@@ -19,6 +19,7 @@ module.exports = {
       fontFamily: {
         ptsans: ['PT Sans', 'sans-serif'],
         roboto: ['Roboto', 'sans-serif'],
+        ardeco: ['Ardeco', 'sans-serif']
       },
       fontSize: {
         h1: ['2.5rem', '3rem'], // 40px font-size, 48px line-height
