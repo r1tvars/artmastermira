@@ -4,6 +4,4 @@ custom.block_settings:
     _form: 'Drupal\custom\Form\blockSettingsForm'
     _title: 'Block settings'
   requirements:
-    _access: 'TRUE'
-    _role: 'administrator+content_editor'
     _user_is_logged_in: 'TRUE'
