@@ -121,7 +121,7 @@ class blockSettingsForm extends ConfigFormBase {
     }
 
     public function invalidateTags() {
-        
+        \Drupal::service('cache_tags.invalidator')->invalidateAll();
     }
 
 }
