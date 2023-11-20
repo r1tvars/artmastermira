@@ -121,7 +121,15 @@ class blockSettingsForm extends ConfigFormBase {
     }
 
     public function invalidateTags() {
-        \Drupal::service('cache_tags.invalidator')->invalidateAll();
+        $tags = [
+            'config:block.block.views_block__first_page_header_block_1',
+            'config:block.block.views_block__about_block_block_1',
+            'config:block.block.views_block__galleries_block_1',
+            'config:block.block.block_webforma',
+            'config:block.block.footer-lv',
+            'config:block.block.footer-ru',
+        ];
+        \Drupal::service('cache_tags.invalidator')->invalidateTags($tags);
     }
 
 }
