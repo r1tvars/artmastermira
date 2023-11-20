@@ -26,8 +26,11 @@
     <div class="absolute top-0 z-[-2] h-full w-screen bg-darkGray bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
     <div class="px-5">
         <div class="max-w-[995px] w-full m-auto mb-[50px]">
-            <div class="flex w-full justify-center">
+            <div class="flex w-full justify-center flex-col items-center gap-2">
                 <h2 class="font-ardeco text-4xl font-medium uppercase text-lotion text-center">{{title}}</h2>
+                {% if description %}
+                    <p class="text-[#858E99] text-h5 font-light italic text-center font-roboto">{{description}}</p>
+                {% endif %}
             </div>
             <div class="flex md:flex-row flex-col md:gap-[45px] gap-[25px] pt-[40px]">
                 <div class="basis-1/2 flex flex-col bg-lighterGray rounded-md pt-7 px-6 pb-9 justify-center">
@@ -40,7 +43,7 @@
                 <div class="basis-1/2">
                     <div class="flex md:flex-row flex-col md:gap-[45px] gap-[25px] h-full">
                         <div class="basis-2/3 rounded-md overflow-hidden w-full relative">
-                            <img src="{{base_url}}/themes/custom/artmastermira/dist/assets/header.jpg" class="h-full object-cover" alt="">
+                            <img src="{{base_url}}/themes/custom/artmastermira/dist/assets/question_image.png" class="md:h-full h-[225px] w-full object-cover object-top" alt="">
                             <div class="absolute inset-0 bg-contact-block-image"></div>
                         </div>
                         <div class="shadow-inner basis-1/3 flex md:flex-col justify-center items-center gap-[45px] rounded-md w-full bg-lighterGray md:px-0 px-2.5 py-5">

@@ -36,6 +36,7 @@ function custom_preprocess_block(&$variables) {
         $config = \Drupal::config('system.site');
         $variables['site_name'] = $config->get('name');
         $variables['site_slogan'] = $config->get('slogan');
+        $variables['block_data'] = getBlockSettingsFromConfig($variables)['hero_block'];
     }
     if($variables['plugin_id'] == 'views_block:about_block-block_1'){
         foreach ($variables['content']['#view']->result as $row) {
@@ -49,7 +50,7 @@ function custom_preprocess_block(&$variables) {
             }else{
                 $image = 'default';
             }
-            $variables['title'] = $node->label() ?? '';
+            $variables['title'] = getBlockSettingsFromConfig($variables)['about_block']['about_title'] ?? $node->label();
             $variables['body'] = $node->field_front_page_about_body->value ?? '';
             $variables['image'] = $image;
             $variables['url'] = $node->toUrl()->toString();
@@ -74,6 +75,7 @@ function custom_preprocess_block(&$variables) {
             ];
         }
         $variables['galleries_url'] = Url::fromRoute('view.galleries.page_1')->toString();
+        $variables['block_data'] = getBlockSettingsFromConfig($variables)['gallery_block'];
     }
     $variables['galleries'] = $galleries;
 
@@ -155,12 +157,51 @@ function custom_preprocess_field(&$variables){
     }
 }
 
-
 /**
  * Implements custom_preprocess_webform
  */
-function custom_preprocess_webform(&$vars){
-    $wfid = $vars["element"]["#webform_id"];
+function custom_preprocess_webform(&$variables){
+    $wfid = $variables["element"]["#webform_id"];
     $wf = \Drupal\webform\Entity\Webform::load($wfid);
-    $vars["title"] = $wf->label();
+    $variables["title"] = getBlockSettingsFromConfig($variables)['contact_block']['contact_title'] ?? $wf->label();
+    $variables['description'] = getBlockSettingsFromConfig($variables)['contact_block']['contact_description'] ?? null;
 }
+
+/**
+ * Implements hook_preprocess_page
+ */
+function custom_preprocess_page(&$variables){
+    $variables['footer_data'] = getBlockSettingsFromConfig($variables)['footer'];
+}
+
+/**
+ * Get block titles and descriptions from config and insert in $variables array
+ *
+ * @param array $variables
+ * @return array
+ */
+function getBlockSettingsFromConfig($variables) {
+    $config = \Drupal::config('custom.block_settings');
+    $variables['hero_block'] = [
+        'hero_title' => $config->get('hero_title'),
+        'hero_description' => $config->get('hero_description')
+    ];
+    $variables['about_block'] = [
+        'about_title' => $config->get('about_title'),
+    ];
+    $variables['gallery_block'] = [
+        'gallery_title' => $config->get('gallery_title'),
+        'gallery_description' => $config->get('gallery_description'),
+        'gallery_button_title' => $config->get('gallery_button_title')
+    ];
+    $variables['contact_block'] = [
+        'contact_title' => $config->get('contact_title'),
+        'contact_description' => $config->get('contact_description'),
+    ];
+    $variables['footer'] = [
+        'footer_title' => $config->get('footer_title'),
+        'footer_copyright' => $config->get('footer_copyright'),
+    ];
+    return $variables;
+  }
+  

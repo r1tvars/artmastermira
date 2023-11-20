@@ -31,8 +31,8 @@
     <div class="relative md:h-[820px] h-[694px] overflow-hidden">
         <div class="absolute inset-0 bg-header-linear-gradient flex flex-col justify-center items-center">
           <div class="flex flex-col max-w-[500px] w-full gap-5 text-white md:px-0 px-5">
-            <h1 class="font-ardeco text-6xl text-center">{{site_name}}</h1>
-            <p class="font-ardeco text-lg text-center">{{site_slogan}}</p>
+            <h1 class="font-ardeco text-6xl text-center">{{block_data.hero_title}}</h1>
+            <p class="font-ardeco text-lg text-center">{{block_data.hero_description}}</p>
           </div>
           <div class="scroll-to-content absolute bottom-[55px] cursor-pointer" data-content-target="block-views-block-about-block-block-1" >
             <div class="w-1 py-[6px] px-[10px] h-[35px] border-2 border-white rounded-3xl opacity-75 box-content mousey">
@@ -40,8 +40,8 @@
             </div>
           </div>
         </div>
-        <img class="md:h-[820px] h-[694px] object-cover w-full hero-image zoom-in" src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?q=80&w=1945&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-        {# <img class="md:h-[820px] h-[694px] object-cover w-full hero-image zoom-in" src="{{base_path ~ directory}}/dist/assets/header.jpg" alt=""> #}
+        {# <img class="md:h-[820px] h-[694px] object-cover w-full hero-image zoom-in" src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?q=80&w=1945&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""> #}
+        <img class="md:h-[820px] h-[694px] object-cover w-full hero-image zoom-in" src="{{base_path ~ directory}}/dist/assets/mainv1.jpg" alt="">
     </div>
     <div class="flex w-full absolute bottom-0 rotate-180">
         <div class="flex lg:basis-2/5 basis-1/5 h-[50px] bg-grayBase"></div>

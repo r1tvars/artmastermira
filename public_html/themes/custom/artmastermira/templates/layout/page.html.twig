@@ -51,7 +51,7 @@
 
   <header role="banner">
     <div class="flex flex-col relative">
-      <div class="flex w-full z-10 absolute fixed-header">
+      <div class="flex w-full z-20 absolute fixed-header">
         <div class="flex lg:basis-2/5 basis-1/5 h-[50px] bg-darkGray justify-center">
           <div class="flex items-center relative md:hidden">
             <div class="relative">
@@ -160,15 +160,14 @@
           <p
             class="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500 lg:text-left"
           >
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
-            consequuntur amet culpa cum itaque neque.
+            {{footer_data.footer_title}}
           </p>
         </div>
         {{page.footer}}
       </div>
 
       <p class="mt-12 text-center text-sm text-gray-500 lg:text-right">
-        © 2023. ArtMasterMira. {{'Все права защищены.'|t}}
+        {{footer_data.footer_copyright}}
       </p>
     </div>
   </footer>

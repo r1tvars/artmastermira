@@ -34,16 +34,17 @@
     <div class="mx-auto max-w-[1170px] pb-[50px] relative">
       <div class="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">
         <div class="flex items-center gap-12">
-            <h2><b>Gallery</b></h2>
-            <p class="hidden max-w-screen-sm md:flex">
-                This is a section of some simple filler text,
-                also known as placeholder text. It shares some characteristics of a real written text.
-            </p>
+            <h2><b>{{block_data.gallery_title}}</b></h2>
+            {% if block_data.gallery_description %}
+              <p class="hidden max-w-screen-sm md:flex">
+                  {{block_data.gallery_description}}
+              </p>
+            {% endif %}
         </div>
 
         <a href="{{galleries_url}}"
             class="inline-block rounded-lg border bg-darkGray dark:border-none px-4 py-2 text-center text-sm font-semibold text-gray-200 outline-none ring-indigo-300 transition duration-100 hover:bg-oldGold hover:text-darkGray focus-visible:ring active:bg-gray-200 md:px-8 md:py-3 md:text-base">
-            {{'Более'|t}}
+            {{block_data.gallery_button_title}}
         </a>
       </div>
       <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">

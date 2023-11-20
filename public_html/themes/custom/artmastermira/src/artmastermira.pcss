@@ -6,6 +6,10 @@
   font-family: 'Ardeco';
   src: local('Ardeco'), url(./fonts/Ardeco.ttf) format('ttf');
 }
+@font-face {
+  font-family: 'Magnolia';
+  src: local('Magnolia'), url(./fonts/Magnolia.otf) format('otf');
+}
 @tailwind utilities;
 
 @layer base {
@@ -164,7 +168,7 @@ body{
   @apply bg-lotion
 }
 .menu__popover{
-  @apply flex justify-center items-center flex-col bg-oldGold fixed inset-0 px-5 overflow-auto w-full h-full
+  @apply flex justify-center items-center flex-col bg-oldGold fixed inset-0 px-5 overflow-auto w-full h-full z-10
 }
 .top-left-cut{
   clip-path: polygon(0 0, 100% 0%, 0% 100%, 0% 100%);
@@ -219,4 +223,23 @@ body{
 }
 .bg-header-linear-gradient{
   z-index: 2;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #FEFDFA;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #555C66;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

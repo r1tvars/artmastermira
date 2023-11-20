@@ -1,0 +1,4 @@
+custom.block_settings:
+  route_name: custom.block_settings
+  title: Settings
+  base_route: custom.block_settings

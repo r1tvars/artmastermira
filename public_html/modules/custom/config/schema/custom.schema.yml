@@ -1,0 +1,34 @@
+custom.block_settings:
+  type: config_object
+  label: 'Block settings'
+  mapping:
+    hero_title:
+      type: text
+      label: 'Sākuma bloka virsraksts'
+    hero_description:
+      type: text
+      label: 'Sākuma bloka apraksts'
+    about_title:
+      type: text
+      label: 'Par mums bloka virsraksts'
+    gallery_title:
+      type: text
+      label: 'Galerijas bloka virsraksts'
+    gallery_description:
+      type: text
+      label: 'Galerijas bloka apraksts'
+    gallery_button_title:
+      type: text
+      label: 'Galerijas bloka pogas virsraksts'
+    contact_title:
+      type: text
+      label: 'Kontaktu bloka pogas virsraksts'
+    contact_description:
+      type: text
+      label: 'Kontaktu bloka pogas virsraksts'
+    footer_title:
+      type: text
+      label: 'Kājenes teksts'
+    footer_copyright:
+      type: text
+      label: 'Kājenes marķējums'

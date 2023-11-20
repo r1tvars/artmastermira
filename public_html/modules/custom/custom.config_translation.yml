@@ -1,0 +1,5 @@
+custom.block_settings:
+  title: 'Custom block configuration'
+  base_route_name: custom.block_settings
+  names:
+    - custom.block_settings
