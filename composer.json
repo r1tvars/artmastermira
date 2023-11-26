@@ -37,6 +37,7 @@
         "drupal/pathauto": "^1.11",
         "drupal/redirect_after_login": "^3.0@dev",
         "drupal/webform": "^6.2@beta",
+        "drupal/xmlsitemap": "^1.5",
         "kint-php/kint": "^5.0",
         "npm-asset/nanogallery2": "^3.0",
         "npm-asset/slick-carousel": "^1.8",
