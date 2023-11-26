@@ -1,15 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @tailwind base;
 @tailwind components;
-@font-face {
-  font-family: 'Ardeco';
-  src: local('Ardeco'), url(./fonts/Ardeco.ttf) format('ttf');
-}
-@font-face {
-  font-family: 'Magnolia';
-  src: local('Magnolia'), url(./fonts/Magnolia.otf) format('otf');
-}
 @tailwind utilities;
 
 @layer base {
@@ -18,6 +11,9 @@
   }
 }
 
+body{
+  font-family: 'Pacifico', cursive;
+}
 @layer components {
 
   .node__content p,
@@ -33,7 +29,7 @@
     @apply text-[30px] font-light
   }
   .about-block h2, .about-block h3, .about-block h4, .about-block h5, .about-block h6{
-    @apply mb-[19px]
+    @apply mb-[19px] last:mb-0
   }
   .about-block p{
     @apply mb-2.5
@@ -85,7 +81,7 @@
     @apply flex h-[52px] border-0 rounded-[37px] md:justify-normal justify-center mt-3
   }
   .artmaster-contact-form .webform-actions input{
-    @apply w-[175px] border-0 rounded-[37px] bg-oldGold md:hover:bg-darkGray md:hover:text-lotion p-0 flex justify-center font-ardeco text-h4 text-darkGray cursor-pointer shadow-md
+    @apply w-[175px] border-0 rounded-[37px] bg-oldGold md:hover:bg-darkGray md:hover:text-lotion p-0 flex justify-center  text-h4 text-darkGray cursor-pointer shadow-md
   }
   
 }
@@ -113,7 +109,7 @@
   width: 20px !important;
 }
 .cke_editable p {
-  @apply mb-3.5
+  @apply mb-3.5 text-h5
 }
 .cke_editable h1, .cke_editable h2, .cke_editable h3, .cke_editable h4, .cke_editable h5, .cke_editable h6{
   @apply mb-6 font-light

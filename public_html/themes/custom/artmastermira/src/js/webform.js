@@ -31,7 +31,7 @@
 //               setTimeout(() => {
 //                 $('.webform-thanks-item').remove();
 //                 $('.ui-dialog-title').before('<img class="webform-thanks-item" src="/themes/custom/researchlatvia/dist/assets/confirm.png">');
-//                 $('.webform-confirmation-modal--content').append('<span class="webform-modal-thank-you-close webform-thanks-item font-ardeco mt-[23px] mb-1 p-cta bg-white_primary rounded-md border border-gray-10 shadow-cta-btn text-black_secondary text-smx text-center z-10 cursor-pointer">'+Drupal.t("Close")+'</span>');
+//                 $('.webform-confirmation-modal--content').append('<span class="webform-modal-thank-you-close webform-thanks-item  mt-[23px] mb-1 p-cta bg-white_primary rounded-md border border-gray-10 shadow-cta-btn text-black_secondary text-smx text-center z-10 cursor-pointer">'+Drupal.t("Close")+'</span>');
 //                 $('.webform-confirmation-modal').css({
 //                   'inset': '0',
 //                   'margin': 'auto'

@@ -30,12 +30,14 @@
   {% block content %}
     <div class="max-w-[995px] w-full min-h-[420px] m-auto mb-[50px]">
         <div class="flex w-full justify-center">
-            <h2 class="font-ardeco text-4xl font-medium uppercase text-darkGray text-center">{{title}}</h2>
+            <h2 class=" text-4xl font-medium uppercase text-darkGray text-center">{{title}}</h2>
         </div>
-        <div class="flex sm:flex-row flex-col gap-[45px] pt-[40px]">
-            <div class="{% if image != 'default' %}sm:basis-1/2{% endif %} about-block pt-3 flex flex-col font-ardeco">
-              {{body|raw}}
-              <a class="text-darkGray font-medium mt-5 w-fit" href="{{url}}">{{'Читать далее'|t}}</a>
+        <div class="flex sm:flex-row flex-col gap-[45px] md:pt-[40px] pt-5">
+            <div class="{% if image != 'default' %}sm:basis-1/2{% endif %} about-block md:pt-3 flex flex-col ">
+              <div class="text-h5">
+                {{body|raw}}
+              </div>
+              <a class="text-darkGray font-medium mt-5 w-fit text-h5" href="{{url}}">{{'Читать далее'|t}}</a>
             </div>
             {% if image != 'default' %}
               <div class="sm:basis-1/2 rounded-md overflow-hidden shadow-lg sm:bg-center bg-top sm:h-[520px] h-[220px] bg-cover" style="background-image: url('{{image}}');"></div>
