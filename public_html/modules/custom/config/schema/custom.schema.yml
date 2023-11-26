@@ -8,6 +8,9 @@ custom.block_settings:
     hero_description:
       type: text
       label: 'Sākuma bloka apraksts'
+    hero_image:
+      type: text
+      label: 'Sākuma bloka bilde'
     about_title:
       type: text
       label: 'Par mums bloka virsraksts'
@@ -26,6 +29,9 @@ custom.block_settings:
     contact_description:
       type: text
       label: 'Kontaktu bloka pogas virsraksts'
+    contact_image:
+      type: text
+      label: 'Kontaktu bloka bilde'
     footer_title:
       type: text
       label: 'Kājenes teksts'

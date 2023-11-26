@@ -2,6 +2,7 @@
 
 use Drupal\image\Entity\ImageStyle;
 use Drupal\Core\Url;
+use Drupal\media\Entity\Media;
 
 /**
  * Implements hook_theme_suggestions_alter().
@@ -37,6 +38,12 @@ function custom_preprocess_block(&$variables) {
         $variables['site_name'] = $config->get('name');
         $variables['site_slogan'] = $config->get('slogan');
         $variables['block_data'] = getBlockSettingsFromConfig($variables)['hero_block'];
+        $hero_block_image_media_id = getBlockSettingsFromConfig($variables)['hero_block']['hero_image'];
+        $media_entity = $hero_block_image_media_id ? Media::load($hero_block_image_media_id) : false;
+        if ($media_entity) {
+            $image = getMediaImage($media_entity, 'fullhd');
+            $variables['image'] = $image;
+        }
     }
     if($variables['plugin_id'] == 'views_block:about_block-block_1'){
         foreach ($variables['content']['#view']->result as $row) {
@@ -165,6 +172,12 @@ function custom_preprocess_webform(&$variables){
     $wf = \Drupal\webform\Entity\Webform::load($wfid);
     $variables["title"] = getBlockSettingsFromConfig($variables)['contact_block']['contact_title'] ?? $wf->label();
     $variables['description'] = getBlockSettingsFromConfig($variables)['contact_block']['contact_description'] ?? null;
+    $about_block_image_media_id = getBlockSettingsFromConfig($variables)['contact_block']['contact_image'];
+    $media_entity = $about_block_image_media_id ? Media::load($about_block_image_media_id) : false;
+    if ($media_entity) {
+        $image = getMediaImage($media_entity, 'wide');
+        $variables['image'] = $image;
+    }
 }
 
 /**
@@ -184,7 +197,8 @@ function getBlockSettingsFromConfig($variables) {
     $config = \Drupal::config('custom.block_settings');
     $variables['hero_block'] = [
         'hero_title' => $config->get('hero_title'),
-        'hero_description' => $config->get('hero_description')
+        'hero_description' => $config->get('hero_description'),
+        'hero_image' => $config->get('hero_image')
     ];
     $variables['about_block'] = [
         'about_title' => $config->get('about_title'),
@@ -197,6 +211,7 @@ function getBlockSettingsFromConfig($variables) {
     $variables['contact_block'] = [
         'contact_title' => $config->get('contact_title'),
         'contact_description' => $config->get('contact_description'),
+        'contact_image' => $config->get('contact_image'),
     ];
     $variables['footer'] = [
         'footer_title' => $config->get('footer_title'),

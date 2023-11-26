@@ -39,6 +39,12 @@ class blockSettingsForm extends ConfigFormBase {
             '#title' => $this->t('Описание'),
             '#default_value' => $this->config($this->cfg_name)->get('hero_description')
         ];
+        $form['hero_image'] = [
+            '#type' => 'media_library',
+            '#allowed_bundles' => ['image'],
+            '#title' => $this->t('Картина'),
+            '#default_value' => $this->config($this->cfg_name)->get('hero_image'),
+        ];
         $form['about_header']['#markup'] = "<h4>{$this->t('О нас блок')}</h4>";
         $form['about_title'] = [
             '#type' => 'textfield',
@@ -72,6 +78,12 @@ class blockSettingsForm extends ConfigFormBase {
             '#title' => $this->t('Описание'),
             '#default_value' => $this->config($this->cfg_name)->get('contact_description')
         ];
+        $form['contact_image'] = [
+            '#type' => 'media_library',
+            '#allowed_bundles' => ['image'],
+            '#title' => $this->t('Картина'),
+            '#default_value' => $this->config($this->cfg_name)->get('contact_image'),
+        ];
         $form['footer_header']['#markup'] = "<h4>{$this->t('Нижний колонтитул')}</h4>";
         $form['footer_title'] = [
             '#type' => 'textfield',
@@ -100,12 +112,14 @@ class blockSettingsForm extends ConfigFormBase {
         $this->config($this->cfg_name)
             ->set('hero_title', $form_state->getValue('hero_title'))
             ->set('hero_description', $form_state->getValue('hero_description'))
+            ->set('hero_image', $form_state->getValue('hero_image'))
             ->set('about_title', $form_state->getValue('about_title'))
             ->set('gallery_title', $form_state->getValue('gallery_title'))
             ->set('gallery_description', $form_state->getValue('gallery_description'))
             ->set('gallery_button_title', $form_state->getValue('gallery_button_title'))
             ->set('contact_title', $form_state->getValue('contact_title'))
             ->set('contact_description', $form_state->getValue('contact_description'))
+            ->set('contact_image', $form_state->getValue('contact_image'))
             ->set('footer_title', $form_state->getValue('footer_title'))
             ->set('footer_copyright', $form_state->getValue('footer_copyright'))
             ->save();

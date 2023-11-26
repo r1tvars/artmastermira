@@ -26,6 +26,12 @@
  * @see template_preprocess_block()
  */
 #}
+{% set base_url = url('<front>')|render|split('/', -1)|join('/') %}
+{% if image %}
+    {% set hero_image = image %}
+{% else %}
+    {% set hero_image = base_url ~ '/themes/custom/artmastermira/dist/assets/mainv1.jpg' %}
+{% endif %}
 <div {{ attributes.addClass('relative') }}>
   {% block content %}
     <div class="relative md:h-[820px] h-[694px] overflow-hidden">
@@ -41,7 +47,7 @@
           </div>
         </div>
         {# <img class="md:h-[820px] h-[694px] object-cover w-full hero-image zoom-in" src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?q=80&w=1945&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt=""> #}
-        <img class="md:h-[820px] h-[694px] object-cover w-full hero-image zoom-in" src="{{base_path ~ directory}}/dist/assets/mainv1.jpg" alt="">
+        <img class="md:h-[820px] h-[694px] object-cover w-full hero-image zoom-in" src="{{hero_image}}" alt="AartMasterMira Hero Image">
     </div>
     <div class="flex w-full absolute bottom-0 rotate-180">
         <div class="flex lg:basis-2/5 basis-1/5 h-[50px] bg-grayBase"></div>

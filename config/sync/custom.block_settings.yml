@@ -6,6 +6,7 @@ gallery_description: 'Šeit ir pieejamas visas galerijas kas mums ir'
 gallery_button_title: 'Visas galerijas'
 contact_title: 'Vai jums ir jautajumi mums?'
 contact_description: 'Mēs ar prieku atbildēsim pēc iespējas ātrāk'
+contact_image: null
 footer_title: 'Visu izdarīsim!'
 footer_copyright: '© 2023. ArtMasterMira. Visas tiesības aizsargātas'
-contact_image: '15'
+hero_image: null
