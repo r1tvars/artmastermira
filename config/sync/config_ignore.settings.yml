@@ -2,4 +2,7 @@ _core:
   default_config_hash: IgOVnECx6lbVt6JVFnadoEEugneDf3UblPZnOzov43Q
 mode: simple
 ignored_config_entities:
+  - 'fontyourface.font_display.*'
+  - fontyourface.settings
+  - 'local_fonts.local_font_config_entity.*'
   - 'xmlsitemap.xmlsitemap.*'
