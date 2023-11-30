@@ -17,6 +17,7 @@
           "thumbnailBorderVertical": 0,
           "thumbnailBorderHorizontal": 0,
           "thumbnailHoverEffect2": "imageScaleIn80",
+          "locationHash": false
         });
       })
     }
