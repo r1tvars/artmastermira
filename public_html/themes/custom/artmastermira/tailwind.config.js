@@ -16,11 +16,6 @@ module.exports = {
         olive: '#888673',
         red: '#ff0500'
       },
-      fontFamily: {
-        ptsans: ['PT Sans', 'sans-serif'],
-        roboto: ['Roboto', 'sans-serif'],
-        pacifico: ['Pacifico', 'cursive'],
-      },
       fontSize: {
         h1: ['2.5rem', '3rem'], // 40px font-size, 48px line-height
         h2: ['2rem', '2.5rem'], // 32px font-size, 40px line-height
