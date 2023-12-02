@@ -245,7 +245,7 @@ handlers:
       sender_mail: ''
       sender_name: ''
       subject: 'Кто-то оставил сообщение на artmastermira.lv'
-      body: "Вы получили новое уведомление от: [webform_submission:values:name] [webform_submission:values:email]\r\nСообщение:\r\n[webform_submission:values:message]"
+      body: "Вы получили новое уведомление от:\r\n[webform_submission:values:name] [webform_submission:values:email]\r\nСообщение:\r\n[webform_submission:values:message]"
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
