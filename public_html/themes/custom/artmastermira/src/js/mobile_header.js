@@ -49,13 +49,11 @@
             $('body').append(`<div class="menu__popover hidden" style="top: -${windowHeight+200}px;">
                 <div class="mobile-menu-content hidden"></div>
                 <div class="mobile-menu-bottom flex w-full z-10 absolute bottom-0 rotate-180 hidden">
-                    <div class="flex lg:basis-2/5 basis-1/5 h-[50px] bg-darkGray"></div>
+                    <div class="flex lg:basis-2/5 basis-1/5 h-[50px] bg-darkGray relative slanted-div-left z-10"></div>
                     <div class="flex flex-1 relative overflow-hidden">
-                    <div class="flex w-[40px] bg-darkGray absolute inset-0 top-left-cut left-[-2px] pt-[52px]"></div>
-                    <div class="flex h-1/2 w-full bg-darkGray"></div>
-                    <div class="flex w-[40px] bg-darkGray absolute inset-0 ml-auto top-right-cut right-[-2px] pt-[52px]"></div>
+                        <div class="flex h-1/2 w-full bg-darkGray"></div>
                     </div>
-                    <div class="flex lg:basis-2/5 basis-1/5 h-[50px] bg-darkGray ml-auto"></div>
+                    <div class="flex lg:basis-2/5 basis-1/5 h-[50px] bg-darkGray ml-auto relative slanted-div-right"></div>
                 </div>
             </div>`);
             $('.mobile-menu').addClass('hidden');
