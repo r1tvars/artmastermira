@@ -245,13 +245,13 @@ handlers:
       sender_mail: ''
       sender_name: ''
       subject: 'Уведомление от artmastermira.lv'
-      body: '<p>Jums ir pienācis jauns ziņojums. To jūs varat apskatīties seit: href="https://artmastermira.lv/lv/admin/structure/webform/manage/contact/results/submissions"&gt;https://artmastermira.lv/lv/admin/structure/webform/manage/contact/results/submissions</p>'
+      body: 'Jums ir pienācis jauns ziņojums. To jūs varat apskatīties seit: https://artmastermira.lv/lv/admin/structure/webform/manage/contact/results/submissions'
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
       exclude_empty_checkbox: false
       exclude_attachments: false
-      html: true
+      html: false
       attachments: false
       twig: false
       theme_name: ''
