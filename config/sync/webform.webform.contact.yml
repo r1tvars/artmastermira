@@ -220,51 +220,14 @@ access:
     users: {  }
     permissions: {  }
 handlers:
-  email_confirmation:
+  notification:
     id: email
-    handler_id: email_confirmation
-    label: 'Email confirmation'
-    notes: ''
-    status: false
-    conditions: {  }
-    weight: 1
-    settings:
-      states:
-        - completed
-      to_mail: '[current-user:mail]'
-      to_options: {  }
-      bcc_mail: ''
-      bcc_options: {  }
-      cc_mail: ''
-      cc_options: {  }
-      from_mail: _default
-      from_options: {  }
-      from_name: _default
-      reply_to: ''
-      return_path: ''
-      sender_mail: ''
-      sender_name: ''
-      subject: '[webform_submission:values:subject:raw]'
-      body: '[webform_submission:values:message:value]'
-      excluded_elements: {  }
-      ignore_access: false
-      exclude_empty: true
-      exclude_empty_checkbox: false
-      exclude_attachments: false
-      html: true
-      attachments: false
-      twig: false
-      theme_name: ''
-      parameters: {  }
-      debug: false
-  email_notification:
-    id: email
-    handler_id: email_notification
-    label: 'Email notification'
+    handler_id: notification
+    label: Notification
     notes: ''
     status: true
     conditions: {  }
-    weight: 2
+    weight: 0
     settings:
       states:
         - completed
@@ -274,43 +237,6 @@ handlers:
       bcc_options: {  }
       cc_mail: ''
       cc_options: {  }
-      from_mail: '[site:mail]'
-      from_options: {  }
-      from_name: '[webform_submission:values:name:raw]'
-      reply_to: ''
-      return_path: ''
-      sender_mail: ''
-      sender_name: ''
-      subject: 'Уведомление от artmastermira.lv'
-      body: '<p>Submitted on [webform_submission:created]</p><p>Submitted by: [webform_submission:user]</p><p>Submitted values are:</p><p>[webform_submission:values]</p>'
-      excluded_elements: {  }
-      ignore_access: false
-      exclude_empty: true
-      exclude_empty_checkbox: false
-      exclude_attachments: false
-      html: true
-      attachments: false
-      twig: false
-      theme_name: ''
-      parameters: {  }
-      debug: false
-  e_pasts:
-    id: email
-    handler_id: e_pasts
-    label: E-pasts
-    notes: ''
-    status: true
-    conditions: {  }
-    weight: 2
-    settings:
-      states:
-        - completed
-      to_mail: _default
-      to_options: {  }
-      bcc_mail: ''
-      bcc_options: {  }
-      cc_mail: ''
-      cc_options: {  }
       from_mail: _default
       from_options: {  }
       from_name: _default
@@ -318,8 +244,8 @@ handlers:
       return_path: ''
       sender_mail: ''
       sender_name: ''
-      subject: _default
-      body: _default
+      subject: 'Уведомление от artmastermira.lv'
+      body: '<p><a href="https://artmastermira.lv/lv/admin/structure/webform/manage/contact/results/submissions">https://artmastermira.lv/lv/admin/structure/webform/manage/contact/results/submissions</a></p>'
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true

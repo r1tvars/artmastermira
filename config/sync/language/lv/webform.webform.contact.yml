@@ -10,11 +10,4 @@ elements: |
     '#submit__label': 'Nosūtīt ziņu'
 settings:
   confirmation_message: '<p>Paldies par jūsu ziņu, mēs apskatīsim to pēc iespējas ātrāk.</p>'
-handlers:
-  email_confirmation:
-    settings:
-      body: '<p>[webform_submission:values:message:value]</p>'
-  email_notification:
-    settings:
-      body: '<p>[webform_submission:values:message:value]</p>'
 title: 'Vai jums ir jautājums?'
