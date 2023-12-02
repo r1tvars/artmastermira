@@ -244,8 +244,8 @@ handlers:
       return_path: ''
       sender_mail: ''
       sender_name: ''
-      subject: 'Уведомление от artmastermira.lv'
-      body: 'Jums ir pienācis jauns ziņojums. To jūs varat apskatīties seit: https://artmastermira.lv/lv/admin/structure/webform/manage/contact/results/submissions'
+      subject: 'Кто-то оставил сообщение на artmastermira.lv'
+      body: "Вы получили новое уведомление от: [webform_submission:values:name] [webform_submission:values:email]\r\nСообщение:\r\n[webform_submission:values:message]"
       excluded_elements: {  }
       ignore_access: false
       exclude_empty: true
