@@ -24,6 +24,12 @@ fontawesome:
   version: VERSION
   js:
     https://kit.fontawesome.com/e35a5ab011.js: {type: external, minified: true}
+    
+bootstrap-icons: 
+  version: VERSION
+  css:
+    theme:
+      /libraries/bootstrap-icons/font/bootstrap-icons.min.css: { minified: true }
 
 language_switcher:
   version: VERSION
