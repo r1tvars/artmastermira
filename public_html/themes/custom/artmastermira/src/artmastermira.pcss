@@ -243,3 +243,14 @@ body{
   transform: skewX(-35deg);
   left: 35px;
 }
+
+.mobile-menu.active div {
+  @apply translate-y-6
+}
+
+.mobile-menu-close.active {
+  @apply translate-x-0 w-12
+}
+.mobile-menu-close.active div {
+  @apply first:rotate-45 last:-rotate-45
+}

@@ -45,33 +45,35 @@
                 $('.site-logo path').css({fill: "#292d33", transition: "1.0s"});
             }, 100);
         }
-        $('.mobile-menu').on('click', function(){
-            $('body').append(`<div class="menu__popover hidden" style="top: -${windowHeight+200}px;">
-                <div class="mobile-menu-content hidden"></div>
-                <div class="mobile-menu-bottom flex w-full z-10 absolute bottom-0 rotate-180 hidden">
-                    <div class="flex lg:basis-2/5 basis-1/5 h-[50px] bg-darkGray relative slanted-div-left z-10"></div>
-                    <div class="flex flex-1 relative overflow-hidden">
-                        <div class="flex h-1/2 w-full bg-darkGray"></div>
+        $('.mobile-menu').on('click', function(e){
+            if (!$(e.target).hasClass('active')) {
+                $('body').append(`<div class="menu__popover hidden" style="top: -${windowHeight+200}px;">
+                    <div class="mobile-menu-content hidden"></div>
+                    <div class="mobile-menu-bottom flex w-full z-10 absolute bottom-0 rotate-180 hidden">
+                        <div class="flex lg:basis-2/5 basis-1/5 h-[50px] bg-darkGray relative slanted-div-left z-10"></div>
+                        <div class="flex flex-1 relative overflow-hidden">
+                            <div class="flex h-1/2 w-full bg-darkGray"></div>
+                        </div>
+                        <div class="flex lg:basis-2/5 basis-1/5 h-[50px] bg-darkGray ml-auto relative slanted-div-right"></div>
                     </div>
-                    <div class="flex lg:basis-2/5 basis-1/5 h-[50px] bg-darkGray ml-auto relative slanted-div-right"></div>
-                </div>
-            </div>`);
-            $('.mobile-menu').addClass('hidden');
-            $('.mobile-menu-close').removeClass('hidden');
-            $('.mobile-menu-bottom').removeClass('hidden');
-            $('body').addClass('overflow-y-hidden');
-            $('.menu__popover').removeClass('hidden');
-            $('.menu__popover').addClass('active');
-            menu_animate();
-            content = $('.header-menu').clone();
-            content.removeClass('text-white').addClass('text-darkGray');
-            $('.mobile-menu-content').append(content);
-            $('.mobile-menu-content').fadeIn(1500);
+                </div>`);
+                $('.mobile-menu').addClass('active');
+                $('.mobile-menu-close').addClass('active');
+                $('.mobile-menu-bottom').removeClass('hidden');
+                $('body').addClass('overflow-y-hidden');
+                $('.menu__popover').removeClass('hidden');
+                $('.menu__popover').addClass('active');
+                menu_animate();
+                content = $('.header-menu').clone();
+                content.removeClass('text-white').addClass('text-darkGray');
+                $('.mobile-menu-content').append(content);
+                $('.mobile-menu-content').fadeIn(1500);
+            }
         });
         $(document).on('click', '.scroll-to-about-mobile, .mobile-menu-close', function(){
             $('body').removeClass('overflow-y-hidden');
-            $('.mobile-menu-close').addClass('hidden');
-            $('.mobile-menu').removeClass('hidden');
+            $('.mobile-menu').removeClass('active');
+            $('.mobile-menu-close').removeClass('active');
             setTimeout(() => {
                 $('.menu__popover').animate({
                     top: -windowHeight-200
