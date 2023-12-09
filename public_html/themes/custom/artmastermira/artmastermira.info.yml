@@ -15,7 +15,6 @@ libraries:
   - artmastermira/input_focus
   - artmastermira/webform
   - artmastermira/gallery_init
-  - artmastermira/gallery_swiper
   - artmastermira/fixed_header
 
 regions:

@@ -42,8 +42,6 @@
         "kint-php/kint": "^5.0",
         "npm-asset/bootstrap-icons": "^1.11",
         "npm-asset/nanogallery2": "^3.0",
-        "npm-asset/slick-carousel": "^1.8",
-        "npm-asset/swiper": "^10.3",
         "oomphinc/composer-installers-extender": "^2.0"
     },
     "conflict": {
