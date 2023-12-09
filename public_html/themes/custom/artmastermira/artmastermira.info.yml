@@ -8,7 +8,6 @@ libraries:
   - artmastermira/global-styling
   - artmastermira/nanogallery2
   - artmastermira/slick-slider
-  - artmastermira/fontawesome
   - artmastermira/bootstrap-icons
   - artmastermira/language_switcher
   - artmastermira/scroll_to_content

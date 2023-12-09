@@ -20,11 +20,6 @@ slick-slider:
       /libraries/slick-carousel/slick/slick.css: {}
       /libraries/slick-carousel/slick/slick-theme.css: {}
 
-fontawesome: 
-  version: VERSION
-  js:
-    https://kit.fontawesome.com/e35a5ab011.js: {type: external, minified: true}
-    
 bootstrap-icons: 
   version: VERSION
   css:
@@ -66,14 +61,6 @@ input_focus:
     - core/jquery
     - core/drupal
     - core/once
-
-webform:
-  version: VERSION
-  js:
-    src/js/webform.js: {}
-  dependencies:
-    - core/jquery
-    - core/drupal
 
 gallery_init:
   version: VERSION
