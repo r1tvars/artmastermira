@@ -6,5 +6,6 @@ ignored_config_entities:
   - 'fontyourface.font_display.*'
   - fontyourface.settings
   - 'google_tag.container.*'
+  - google_tag.settings
   - 'local_fonts.local_font_config_entity.*'
   - 'xmlsitemap.xmlsitemap.*'
