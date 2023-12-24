@@ -45,6 +45,14 @@ function custom_preprocess_block(&$variables) {
             $variables['image'] = $image;
         }
     }
+    if($variables['plugin_id'] == 'views_block:gallerie_header-block_1'){
+        $hero_block_image_media_id = getBlockSettingsFromConfig($variables)['hero_block']['hero_image'];
+        $media_entity = $hero_block_image_media_id ? Media::load($hero_block_image_media_id) : false;
+        if ($media_entity) {
+            $image = getMediaImage($media_entity, 'fullhd');
+            $variables['image'] = $image;
+        }
+    }
     if($variables['plugin_id'] == 'views_block:about_block-block_1'){
         foreach ($variables['content']['#view']->result as $row) {
             $node = $row->_entity;
@@ -114,7 +122,13 @@ function custom_preprocess_node(&$variables){
         if(isset($media)){
             $image = getMediaImage($media, 'fullhd');
         }else{
-            $image = 'default';
+            $hero_block_image_media_id = getBlockSettingsFromConfig($variables)['hero_block']['hero_image'];
+            $media_entity = $hero_block_image_media_id ? Media::load($hero_block_image_media_id) : false;
+            if ($media_entity) {
+                $image = getMediaImage($media_entity, 'fullhd');
+            } else {
+                $image = false;
+            }
         }
         $variables['title'] = $node->label() ?? '';
         $variables['body'] = $node->body->value ?? '';

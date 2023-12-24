@@ -16,7 +16,7 @@
 {% block content %}
   <div class="flex items-center">
     {% if site_logo %}
-      <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="site-logo flex max-w-[150px]">
+      <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="site-logo flex max-w-[100px]">
           {{source(base_path ~ directory ~ '/logo.svg')}}
       </a>
     {% endif %}

@@ -71,6 +71,11 @@
  */
 #}
 {% set base_url = url('<front>')|render|split('/', -1)|join('/') %}
+{% if image %}
+    {% set hero_image = image %}
+{% else %}
+    {% set hero_image = base_url ~ '/themes/custom/artmastermira/dist/assets/mainv1.jpg' %}
+{% endif %}
 <article{{ attributes.addClass('node bg-grayBase') }}>
     <div class="relative">
         <div class="h-[520px] overflow-hidden">
@@ -79,12 +84,7 @@
                     <h1 class=" md:text-6xl text-4xl text-center mt-40">{{title}}</h1>
                 </div>
             </div>
-            {% if image == 'default' %}
-                {# <img class="h-[520px] object-cover w-full" src="{{base_path}}themes/custom/artmastermira/dist/assets/mainv1.jpg" alt=""> #}
-                <img class="h-[520px] object-cover w-full" src="{{base_url}}/themes/custom/artmastermira/dist/assets/mainv1.jpg" alt="">
-            {% else %}
-                <img class="h-[520px] object-cover w-full" src="{{image}}" alt="">
-            {% endif %}
+            <img class="h-[520px] object-cover w-full" src="{{hero_image}}" alt="">
         </div>
         <div class="flex w-full absolute bottom-0 rotate-180 z-10">
             <div class="flex lg:basis-2/5 basis-1/5 h-[50px] bg-grayBase relative slanted-div-left z-10"></div>
